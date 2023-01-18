@@ -1,0 +1,946 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a:link , a:visited{text-decoration: none; color: #333;}
+#topbutton{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 53px;
+    height: 53px;
+    background: url(images/btn_top.png) no-repeat;
+    border: none;
+    transition: all 0.8s;
+}
+#topbutton:hover{
+    background: url(images/btn_top_over.png) no-repeat;
+}
+
+/*-----------------------섹션1-------------------------*/
+.section1{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+.section1 .mheader{
+    display: none;
+}
+.section1 .header{
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+.header ul{
+    width: 864px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right:10px;
+}
+.header li{
+    line-height: 40px;
+    position: relative;
+    text-align: center;
+    margin-left: 5px;
+}
+.header li a{
+    font: normal 0.85em 'Nanum Gothic';
+}
+.header li::before{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 5px;
+    width: 90%;
+    height: 3px;
+    background-color: black;
+}
+.header li:nth-child(1){
+    flex: 1 1 11.5%;
+}
+.header li:nth-child(2){
+    flex: 1 1 11.5%;
+}
+.header li:nth-child(3){
+    flex: 1 1 11.5%;
+}
+/*--------------------------*/
+.header li:nth-child(4){
+    flex: 1 1 19.5%;
+    text-align: left;
+    background: url(images/ico_sm_black_open.png) no-repeat;
+    background-position: 138px 17px;
+}
+.header li:nth-child(4) .padding1{
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.hdlink1{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: black;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+.hdlink1 dl{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    color: white;
+    padding-top: 15px;
+    box-sizing: border-box;
+    font: normal 0.9em 'Nanum Gothic';
+    transition: all 0.4s;
+    overflow: hidden;
+}
+.hdlink1 dt, .hdlink1 dd{
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.4s;
+}
+/*--------------------------*/
+.header li:nth-child(5){
+    flex: 1 1 13.5%;
+    padding-left: 15px;
+    text-align: left;
+    background: url(images/ico_sm_black_open.png) no-repeat;
+    background-position: 100px 17px;
+}
+.hdlink2{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background: black;
+    transition: all 0.4s;
+}
+.hdlink2 dl{
+    width: 90%;
+    height: 0;
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+    color: white;
+    font: normal 0.9em 'Nanum Gothic';
+    transition: all 0.4s;
+    overflow: hidden;
+}
+.hdlink2 dt, .hdlink2 dd{
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.4s;
+}
+
+#quick p, #language p{
+    cursor: pointer;
+}
+#quick p:hover, #language p:hover{
+    color: orange;
+}
+/*--------------------------*/
+
+.header li:nth-child(6){
+    flex: 1 1 29.5%;
+}
+.header .icon{
+    display: flex;
+}
+.header .icon a{
+    flex: 0 1 15%;
+    padding-top: 19px;
+}
+.section1 .mobilenav{
+    display: none;
+}
+.section1 .nav{
+    width: 100%;
+    max-width: 1440px;
+    height: 100px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.nav .logo{
+    /* position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0; */
+    flex: 0 1 8%;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+.nav .logo img{
+    line-height: 100px;
+}
+.nav .gnb{
+    /* position: absolute;
+    z-index: 2;
+    left: 49%;
+    transform: translateX(-50%);
+    width: 55%; */
+    flex: 1 1 60%;
+    height: 100px;
+    margin-right: 10px;
+}
+.nav .gnb .depth1{
+    width: 90%;
+    display: flex;
+    line-height: 120px;
+}
+.nav .gnb li{
+    text-align: right;
+}
+.nav .gnb li:nth-child(1){flex: 1 1 15%;}
+.nav .gnb li:nth-child(2){flex: 1 1 10%;}
+.nav .gnb li:nth-child(3){flex: 1 1 10%;}
+.nav .gnb li:nth-child(4){flex: 1 1 13%;}
+.nav .gnb li:nth-child(5){flex: 1 1 15%;}
+.nav .gnb li:nth-child(6){flex: 1 1 15%;}
+.nav .gnb li:nth-child(7){flex: 1 1 17%;}
+
+.nav .gnb a{
+    font: normal 1.3em 'Nanum Gothic';
+}
+
+.nav .menu{
+    /* position: absolute;
+    z-index: 2;
+    right: -5%;
+    transform: translateX(-50%);
+    width: 216px;  */
+    flex: 0 1 18%;
+    height: 100px;
+}
+.nav .menu ul{
+    width: 90%;
+    display: flex;
+    text-align: center;
+}
+.nav .menu li{
+    flex: 1 1 33.3%;
+    line-height: 120px; /*미디어쿼리 100안팎으로 조정*/
+}
+.nav .menu a{
+    font: bold 0.9em 'Nanum Gothic';
+    color: slategray;
+}
+.nav .submenu{
+    width: 100%;
+    max-width: 1440px;
+    height: 50px;
+    position: absolute;
+    z-index: 5;
+    top: 95%;
+    left: 0;
+    background-color: black;
+    display: none;
+    /* opacity: 0; */
+    /* transition: all 1s cubic-bezier(0,1.18,0,1.01); */
+}
+.nav .submenu ul{
+    display: flex;
+    margin-left: 240px;
+}
+.nav .submenu .depth2{
+    width: 500px;
+}
+.depth2 li{
+    flex: 1 1 18.75% !important; 
+    font: lighter 0.7em 'Nanum Gothic';
+    line-height: 50px;
+    text-align: center !important;
+}
+.depth2 li:nth-of-type(4){
+    flex: 1 1 25% !important; 
+    position: relative;
+}
+.depth2 li:nth-of-type(4)::before{
+    position: absolute;
+    z-index: 5;
+    content: '';
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background-color: white;
+    top: 49%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+.depth2 li a{
+    color: white;
+}
+.nav .depth2_2{
+    width: 1100px;
+}
+.nav .depth2_2 li,
+.nav .depth2_3 li,
+.nav .depth2_4 li,
+.nav .depth2_5 li,
+.nav .depth2_6 li{
+    font: lighter 0.7em 'Nanum Gothic';
+    line-height: 50px;
+    text-align: center;
+}
+.nav .depth2_2 li a,
+.nav .depth2_3 li a,
+.nav .depth2_4 li a,
+.nav .depth2_5 li a,
+.nav .depth2_6 li a{
+    color: white;
+}
+
+.nav .depth2_2 li:nth-child(1),
+.nav .depth2_2 li:nth-child(2),
+.nav .depth2_2 li:nth-child(7),
+.nav .depth2_2 li:nth-child(9){
+    flex: 1 1 8%;
+}
+.nav .depth2_2 li:nth-child(3){
+    flex: 1 1 12%;
+}
+.nav .depth2_2 li:nth-child(4){
+    flex: 1 1 10%;
+}
+.nav .depth2_2 li:nth-child(5),
+.nav .depth2_2 li:nth-child(6){
+    flex: 1 1 14%;
+}
+.nav .depth2_2 li:nth-child(8){
+    flex: 1 1 18%;
+}
+
+.nav .depth2_3{
+    width: 1000px;
+}
+.nav .depth2_3 li:nth-child(1){
+    flex: 1 1 15%;
+}
+.nav .depth2_3 li:nth-child(2),
+.nav .depth2_3 li:nth-child(5){
+    flex: 1 1 8.5%;
+}
+.nav .depth2_3 li:nth-child(3),
+.nav .depth2_3 li:nth-child(4){
+    flex: 1 1 10%;
+}
+.nav .depth2_3 li:nth-child(6),
+.nav .depth2_3 li:nth-child(7),
+.nav .depth2_3 li:nth-child(8){
+    flex: 1 1 11%;
+}
+.nav .depth2_4{
+    width: 900px;
+}
+.nav .depth2_4 li:nth-child(1){
+    flex:  1 1 9%;
+}
+.nav .depth2_4 li:nth-child(2),
+.nav .depth2_4 li:nth-child(3),
+.nav .depth2_4 li:nth-child(9){
+    flex: 1 1 7%;
+}
+.nav .depth2_4 li:nth-child(4),
+.nav .depth2_4 li:nth-child(5),
+.nav .depth2_4 li:nth-child(6){
+    flex:  1 1 8%;
+}
+.nav .depth2_4 li:nth-child(7){
+    flex: 1 1 15%;
+}
+.nav .depth2_4 li:nth-child(8){
+    flex: 1 1 10%;
+}
+.nav .depth2_4 li:nth-child(10){
+    flex: 1 1 6%;
+}
+.nav .depth2_5{
+    width: 670px;
+}
+.nav .depth2_5 li:nth-child(1),
+.nav .depth2_5 li:nth-child(2),
+.nav .depth2_5 li:nth-child(7){
+    flex: 1 1 10%;
+}
+.nav .depth2_5 li:nth-child(3){
+    flex: 1 1 17%;
+}
+.nav .depth2_5 li:nth-child(4){
+    flex: 1 1 20%;
+}
+.nav .depth2_5 li:nth-child(5),
+.nav .depth2_5 li:nth-child(6){
+    flex: 1 1 14%;
+}
+.nav .depth2_6{
+    width: 850px;
+}
+.nav .depth2_6 li:nth-child(1),
+.nav .depth2_6 li:nth-child(3),
+.nav .depth2_6 li:nth-child(6){
+    flex: 1 1 9%;
+}
+.nav .depth2_6 li:nth-child(2),
+.nav .depth2_6 li:nth-child(4),
+.nav .depth2_6 li:nth-child(5){
+    flex:  1 1 11%;
+}
+.nav .depth2_6 li:nth-child(7){
+    flex: 1 1 15%;
+}
+.nav .depth2_6 li:nth-child(8){
+    flex: 1 1 20%;
+}
+
+/* .gnb .submenu2{
+    position: absolute;
+    width: 10%;
+    top: 50px;
+    left: 28.5%;
+    transform: translateX(-50%);
+    background-color: #333;
+}
+.gnb .depth3{
+    width: 90%;
+    margin: 20px auto;
+}
+.gnb .depth3 li{
+    line-height: 35px;
+}
+.gnb .depth3 a{
+    font: normal 1.4em sans-serif;
+}
+.gnb .submenu3{
+    position: absolute;
+    width: 18%;
+    top: 50px;
+    left: 36.5%;
+    transform: translateX(-50%);
+    background-color: #333;
+} */
+
+
+/*-----------------------메인 슬라이드-------------------------*/
+.section1 .content{
+    width: 100%;
+    max-width: 1440px;
+    margin: 45px auto;
+    position: relative;
+}
+.section1 .content img{
+    width: 100%;
+}
+.section1 .content2{
+    display: none;
+}
+
+/*-----------------------섹션2-------------------------*/
+.section2{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+.section2 .info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.info .admission{
+    flex: 1 1 70%;
+}
+.admission p{
+    padding-right: 20px;
+    font: normal 400 'Nanum Gothic';
+}
+.admission .icon img{
+    width: 30px;
+}
+.admission .bold{
+    font: bold 1.6em 'Nanum Gothic';
+}
+.admission .subbold{
+    font: bold 1.2em 'Nanum Gothic';
+}
+.info .admission .hour{
+    display: flex;
+    height: 50px;
+    line-height: 30px;
+}
+.info .admission .fee{
+    display: flex;
+    height: 50px;
+    line-height: 30px;
+    width: 100%;
+    border-bottom: 3px solid black;
+}
+.info .visit{
+    flex: 1 1 30%;
+    display: flex;
+}
+.info .visit p{
+    padding-top: 30px;
+    margin-left: 50px;
+    box-sizing: border-box;
+    flex: 1 1 50%;
+    text-align: center;
+    font: bold 1.8em 'Nanum Gothic';
+    color: #3f0b9f;
+    border-bottom: 3px solid #3f0b9f;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.info .visit p:hover{
+    background-color: #3f0b9f;
+    color: white;
+}
+
+.section2 .exhibit{
+    width: 100%;
+    margin-bottom: 45px;
+}
+.section2 .exhibit .extitle{
+    font: bold 3em 'Nanum Gothic';
+    margin-bottom: 40px;
+}
+.section2 .exhibit .exslide{
+    display: flex;
+    justify-content: space-between;
+}
+.exslide .subslide{
+    flex: 0 1 300px;
+}
+.subslide img{
+    height: 480px;
+    vertical-align: middle;
+}
+.exslide .subslide p{
+    margin-bottom: 20px;
+    font-family: 'Nanum Gothic';
+}
+
+.subslide .box span{
+    display: inline-block;
+    margin-right: 5px;
+    width: 70px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 30px;
+}
+.subslide .box span:nth-child(1){
+    width: 100px;
+    background-color: black;
+    color: white;
+}
+.subslide p:nth-of-type(3){
+    font: bold 1.1em 'Namum Gothic';
+}
+.subslide p:nth-of-type(3) a:hover{
+    border-bottom: 2px solid black;
+}
+.exslide .subslide p:nth-of-type(1){
+    position: relative;
+    cursor: pointer;
+}
+.exslide .subslide p:nth-of-type(1)::before{
+    position: absolute;
+    content: '';
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.4s;
+}
+.exslide .subslide p:nth-of-type(1) .place{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font: normal 1.5em 'Nanum Gothic';
+    opacity: 0;
+    transition: all 0.4s;
+}
+.exslide .subslide p:nth-of-type(1):hover .place,
+.exslide .subslide p:nth-of-type(1):hover::before{
+    opacity: 1;
+}
+
+/*-----------------------섹션3-------------------------*/
+.section3{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+.section3 p:nth-of-type(1){
+    margin-bottom: 40px;
+}
+.section3 p:nth-of-type(1) img{
+    width: 30px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.section3 .notitle{
+    font: bold 2.7em 'Nanum Gothic';
+}
+.section3 .notice{
+    display: flex;
+    margin-bottom: 100px;
+}
+.notice .board{
+    flex: 1 1 45%;
+}
+.board .btn{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+.board button{
+    width: 20%;
+    height: 50px;
+    font: bold 1.3em 'Nanum Gothic';
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+.board a{
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+}
+/*-------------------------------------*/
+.board #sub1{
+    display: block;
+}
+.board #sub2, .board #sub3, .board #sub4{
+    display: none;
+}
+.board .content{
+    width: 100%;
+    height: 100%;
+}
+.board .conwrap{
+    width: 95%;
+    height: 395px;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+    line-height: 45px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+}
+.conwrap .text{
+    flex: 1 1 75%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+}
+.conwrap .text ul{
+    width: 100%;
+    list-style: disc;
+    padding-left: 25px;
+}
+.conwrap .text li{
+    font: bold 1.1em 'Nanum Gothic';
+}
+.conwrap .text li a{
+    line-height: 45px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-align: left;
+}
+#sub1 a{
+    width: 90%;
+}
+#sub2 a{
+    width: 70%;
+}
+#sub3 a{
+    width: 65%;
+}
+#sub4 a{
+    width: 55%;
+}
+.conwrap .date{
+    flex: 1 1 20%;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+}
+.conwrap .date ul{
+    width: 100%;
+}
+.conwrap .date li{
+    font: bold 1.1em 'Nanum Gothic';
+    line-height: 55px;
+    text-align: center;
+    color: #888;
+}
+/*-------------------------------------*/
+.notice .banner{
+    flex: 1 1 45%;
+    position: relative;
+}
+.notice .banner .minislide{
+    width: 300% !important;
+}
+.notice .minislide li{
+    width: 33.33% !important;
+}
+
+
+/*-----------------------섹션4-------------------------*/
+.section4{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+.section4 .footermenu{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #aaa;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.footermenu .subbox{
+    flex: 1 1 12.5%;
+}
+.footermenu .subbox p{
+    font: normal 0.9em 'Nanum Gothic';
+    line-height: 35px;
+}
+.footermenu .subbox a:hover{
+    border-bottom: 2px solid #333;
+}
+.footermenu .subbox .subtitle{
+    font: bold 1.2em 'Nanum Gothic';
+    line-height: 40px;
+}
+.footermenu .subbox:last-child{
+    font: bold 0.9em 'Nanum Gothic';
+    cursor: pointer;
+}
+
+.section4 .footer{
+    width: 100%;
+    display: flex;
+    margin: 50px auto;
+}
+.footer .link{
+    flex: 1 1 25%;
+}
+.footer .link:nth-child(1) p{
+    font: bold 1.1em 'Nanum Gothic';
+    line-height: 50px;
+}
+.footer .link:nth-child(1) a:hover,
+.footer .link:nth-child(3) a:hover{
+    border-bottom: 2px solid black;
+}
+.footer .link:nth-child(2) ul{
+    width: 70%;
+}
+.footer .link:nth-child(2) li{
+    font: normal 0.95em 'Nanum Gothic';
+    line-height: 60px;
+    border-bottom: 2px solid black;
+}
+.footer .link:nth-child(2) p{
+    cursor: pointer;
+}
+
+/*---------------1----------------*/
+.footer .link:nth-child(2) li:nth-child(1){
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+.footer .link:nth-child(2) li:nth-child(1) .linktitle1{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    background: url(images/ico_lg_black_open.png) no-repeat;
+    background-position: 200px 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.footer .link:nth-child(2) .linkbox1{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: black;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+.footer .link:nth-child(2) .linkbox1 dl{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 190px;
+    top: 63px;
+    left: 0;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    font: normal 0.9em 'Nanum Gothic';
+    transition: all 0.4s;
+}
+.footer .link:nth-child(2) .linkbox1 dt,
+.footer .link:nth-child(2) .linkbox1 dd{
+    height: 50px;
+    line-height: 50px;
+}
+/*---------------2----------------*/
+.footer .link:nth-child(2) li:nth-child(2){
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+.footer .link:nth-child(2) .linktitle2{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    background: url(images/ico_lg_black_open.png) no-repeat;
+    background-position: 200px 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.footer .link:nth-child(2) .linkbox2{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: black;
+    overflow: hidden;
+}
+.footer .link:nth-child(2) .linkbox2 dl{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 390px;
+    top: 63px;
+    left: 0;
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    color: white;
+    background: black;
+    font: normal 0.9em 'Nanum Gothic';
+    transition: all 0.4s;
+}
+.footer .link:nth-child(2) .linkbox2 dt,
+.footer .link:nth-child(2) .linkbox2 dd{
+    height: 50px;
+    line-height: 50px;
+}
+/*----------------3---------------*/
+.footer .link:nth-child(2) li:nth-child(3){
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+.footer .link:nth-child(2) .linktitle3{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    background: url(images/ico_lg_black_open.png) no-repeat;
+    background-position: 200px 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.footer .link:nth-child(2) .linkbox3{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background: black;
+    overflow: hidden;
+}
+.footer .link:nth-child(2) .linkbox3 dl{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 440px;
+    top: 63px;
+    left: 0;    
+    text-align: center;
+    padding-top: 20px;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    font: normal 0.9em 'Nanum Gothic';
+    transition: all 0.4s;
+}
+.footer .link:nth-child(2) .linkbox3 dt,
+.footer .link:nth-child(2) .linkbox3 dd{
+    height: 50px;
+    line-height: 50px;
+}
+/*-------------------------------*/
+
+.footer .link:nth-child(3) p{
+    font: normal 0.95em 'Nanum Gothic';
+    line-height: 30px;
+}
+.footer .link:nth-child(3) .linktitle{
+    font: bold 0.95em 'Nanum Gothic';
+    line-height: 40px;
+    
+}
+.footer .link:nth-child(4) p{
+    font: normal 0.9em 'Nanum Gothic';
+    line-height: 30px;
+    text-align: right;
+}
+.footer .link:nth-child(4) p:first-child img{
+    width: 10%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.footer .link:nth-child(4) p:last-child{
+    margin-top: 15px;
+}
+.footer .link:nth-child(4) p:last-child img:nth-of-type(1){
+    width: 20%;
+}
+.footer .link:nth-child(4) p:last-child img:nth-of-type(2){
+    width: 27%;
+    margin-left: 10px;
+}

@@ -1,0 +1,137 @@
+
+
+
+.section1, .section2, .section3, .section4{
+    width: 100%;
+    /* min-width: 1024px; */
+}
+
+
+
+/*-------------------section1 전시exhibit----------------------*/
+
+.section2 .exhibit .extitle{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section2 .exhibit .exslide{
+    flex-wrap: wrap;
+    align-items: center;
+}
+.exslide .subslide{
+    flex: 1 1 45%;
+}
+.subslide .box{
+    text-align: center;
+    margin-top: 10px;
+}
+.exslide .subslide p:nth-of-type(1)::before{
+    width: 320px;
+    height: 480px;
+}
+.exslide .subslide p:nth-of-type(1){
+    width: 320px;
+    height: 480px;
+    margin: auto;
+}
+.exslide .subslide:nth-child(1) p:nth-of-type(1)::before{
+    width: 326.77px;
+    height: 480px;
+}
+.exslide .subslide:nth-child(1) p:nth-of-type(1){
+    width: 326.77px;
+    height: 480px;
+}
+.exslide .subslide:nth-of-type(1),
+.exslide .subslide:nth-of-type(2){
+    margin-bottom: 10px;
+}
+
+.exslide .subslide p:nth-of-type(3),
+.exslide .subslide p:nth-child(4){
+    text-align: center;
+}
+
+
+/*-------------------section3 notice----------------------*/
+.section3 .notice{
+    flex-wrap: wrap;
+}
+.notice .board{
+    flex: 1 1 90%;
+    margin-left: 10px;
+}
+.notice .banner{
+    flex: 1 1 90%;
+    margin-left: 10px;
+}
+#sub1 a{
+    width: 100%;
+}
+#sub2 a{
+    width: 100%;
+}
+#sub3 a{
+    width: 100%;
+}
+#sub4 a{
+    width: 90%;
+}
+
+.notice .banner{
+    flex: 1 1 90%;
+}
+.notice .banner img{
+    width: 100%;
+}
+
+
+/*-------------------section 4 footer menu----------------------*/
+.footermenu .subbox{
+    flex: 1 1 24.5%;
+    margin-top: 50px;
+}
+
+.footermenu .subbox:nth-child(1),
+.footermenu .subbox:nth-child(5){
+    margin-left: 20px;
+}
+
+
+/*-------------------section 4 footer----------------------*/
+.footer{
+    flex-wrap: wrap;
+}
+.footer .link{
+    flex: 1 1 45%;
+}
+
+.footer .link:nth-child(1){
+    margin-left: 10px;
+}
+.footer .link:nth-child(3){
+    flex: 0 1 300px;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.footer .link:nth-child(2) ul{
+    width: 50%;
+}
+.footer .link:nth-child(4){
+    margin-top: 100px;
+}
+.footer .link:nth-child(4) .wrap{
+    width: 70%;
+}
+.footer .link:nth-child(4) p:first-child img{
+    width: 6%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.footer .link:nth-child(4) p:last-child img:nth-of-type(1){
+    width: 10%;
+}
+.footer .link:nth-child(4) p:last-child img:nth-of-type(2){
+    width: 13%;
+}

@@ -1,0 +1,394 @@
+.section1, .section2, .section3, .section4{
+    min-width: 450px;
+}
+
+
+.section1 .mheader{
+    display: block;
+}
+.section1 .header, .section1 .nav{
+    display: none;
+}
+.mheader{
+    width: 100%;
+    height: 150px;
+}
+.mheader .mwrap{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mwrap .logo{
+    flex: 1 1 20%;
+    margin-left: 20px;
+}
+.mwrap .icon{
+    flex: 1 1 30%;
+    text-align: right;
+}
+.mwrap img:nth-child(1){
+    margin-right: 20px;
+}
+.mwrap img:nth-child(2){
+    margin-right: 30px;
+}
+
+/*상단 언어선택 부분*/
+#bar{
+    cursor: pointer;
+}
+.back{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5927px;
+    display: none;
+}
+.section1 .mobilenav{
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+}
+.mobilenav .wrap{
+    width: 90%;
+    margin: auto;
+}
+.mobilenav .box1{
+    width: 100%;
+    height: 150px;
+}
+.mobilenav .box1 .mlang{
+    width: 210px;
+    height: 50px;
+    position: relative;
+    border-top: 3px solid black;
+}
+.mobilenav .langbox{
+    font: bold 1.7em 'Nanum Gothic';
+    text-align: center;
+    padding-top: 10px;
+    height: 50px;
+    box-sizing: border-box;
+}
+.mlinkbox{
+    position: absolute;
+    z-index: 110;
+    left: 0; 
+    top: 50px;
+    width: 100%;
+    height: 0; /*225*/
+    overflow: hidden;
+    background: black;
+    transition: all 0.4s;
+}
+.mlinkbox dl{
+    width: 90%;
+    height: 0; /*225*/
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    font: normal 1em 'Nanum Gothic';
+    transition: all 0.4s;
+    overflow: hidden;
+}
+.mlinkbox dl p:hover{
+    color: orange;
+    border-bottom: 2px solid orange;
+}
+.mlinkbox dt, .mlinkbox dd{
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.4s;
+}
+.box1 .xbox{
+    position: absolute;
+    z-index: 110;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.box2{
+    width: 100%;
+    height: 400px;
+}
+.box2 .mlogin{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.mlogin h1{
+    flex: 1 1 50%;
+    font-size: 3em;
+    cursor: pointer;
+}
+.mlogin .mjoin{
+    flex: 1 1 40%;
+    display: flex;
+    justify-content: center;
+}
+.mjoin p{
+    flex: 0 1 150px;
+    font: bold 2em 'Nanum Gothic';
+    line-height: 65px;
+    cursor: pointer;
+}
+.box2 .smallmenu{
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+    background-color: #eee;
+    border-top: 1px solid #333;
+}
+.box2 .smallmenu ul{
+    width: 90%;
+    padding-top: 20px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box2 .smallmenu li{
+    flex: 1 1 45%;
+    width: 150px;
+    font: normal 1.5em 'Nanum Gothic';
+    line-height: 70px;
+    box-sizing: border-box;
+    padding-left: 60px;
+    cursor: pointer;
+}
+
+.box3{
+    width: 100%;
+}
+.box3 ul{
+    width: 100%;
+}
+.box3 li{
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    font: normal 1.5em 'Nanum Gothic';
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.box3 li p{
+    font: bold 1.7em 'Nanum Gothic';
+    line-height: 100px;
+}
+.box3 li dl{
+    width: 100%;
+    height: 240px;
+    line-height: 60px;
+}
+.box3 li dt, .box3 li dd{
+    width: 100%;
+}
+/*-----------------메인 슬라이드----------------------*/
+.section1 .content{
+    display: none;
+}
+.section1 .content2{
+    width: 100%;
+    position: relative;
+}
+.section1 .content2 img{
+    width: 100%;
+}
+.section1 .content2{
+    display: block;
+}
+/*-------------------section2 관람안내----------------------*/
+.section2 .info{
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.section2 .info .admission{
+    flex: 1 1 90%;
+}
+.info .admission .hour{
+    flex-wrap: wrap;
+    height: 250px;
+    margin-left: 20px;
+}
+.admission .icon img{
+    width: 50px;
+}
+.admission .bold{
+    font: bold 2em 'Nanum Gothic';
+}
+.info .admission .hour p:nth-child(1){
+    flex: 0 1 50px;
+}
+.info .admission .hour p:nth-child(3),
+.info .admission .hour p:nth-child(4),
+.info .admission .hour p:nth-child(5){
+    flex: 1 1 90%;
+}
+
+.info .admission .fee{
+    height:150px;
+    flex-wrap: wrap;
+    margin-left: 20px;
+}
+.info .admission .fee p:nth-child(1){
+    flex: 0 1 50px;
+}
+.info .admission .fee p:nth-child(3){
+    flex: 1 1 90%;
+}
+
+
+
+.section2 .info .visit{
+    flex: 1 1 90%;
+    margin-top: 20px;
+    justify-content: center;
+}
+.section2 .info .visit p{
+    flex: none;
+    width: 150px;
+}
+
+
+/*-------------------section2 전시exhibit----------------------*/
+.section2 .exhibit .extitle{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section2 .exhibit .exslide{
+    flex-wrap: wrap;
+    align-items: center;
+}
+.exslide .subslide{
+    flex: 1 1 45%;
+}
+.subslide .box{
+    text-align: center;
+    margin-top: 10px;
+}
+.exslide .subslide p:nth-of-type(1)::before{
+    width: 320px;
+    height: 480px;
+}
+.exslide .subslide p:nth-of-type(1){
+    width: 320px;
+    height: 480px;
+    margin: auto;
+}
+.exslide .subslide:nth-child(1) p:nth-of-type(1)::before{
+    width: 326.77px;
+    height: 480px;
+}
+.exslide .subslide:nth-child(1) p:nth-of-type(1){
+    width: 326.77px;
+    height: 480px;
+}
+.exslide .subslide:nth-of-type(1),
+.exslide .subslide:nth-of-type(2){
+    margin-bottom: 10px;
+}
+
+.exslide .subslide p:nth-of-type(3),
+.exslide .subslide p:nth-child(4){
+    text-align: center;
+}
+
+
+/*-------------------section3 notice----------------------*/
+.section3 .notice{
+    flex-wrap: wrap;
+}
+.notice .board{
+    flex: 1 1 90%;
+    margin-left: 10px;
+}
+.notice .banner{
+    flex: 1 1 90%;
+    margin-left: 10px;
+}
+#sub1 a{
+    width: 80%;
+}
+#sub2 a{
+    width: 70%;
+}
+#sub3 a{
+    width: 60%;
+}
+#sub4 a{
+    width: 60%;
+}
+
+.notice .banner{
+    flex: 1 1 90%;
+}
+.notice .banner img{
+    width: 100%;
+}
+
+
+/*-------------------section 4 footer menu----------------------*/
+.footermenu .subbox{
+    flex: 1 1 24.5%;
+    margin-top: 50px;
+}
+
+.footermenu .subbox:nth-child(1),
+.footermenu .subbox:nth-child(5){
+    margin-left: 20px;
+}
+
+
+/*-------------------section 4 footer----------------------*/
+.footer{
+    flex-wrap: wrap;
+}
+.footer .link{
+    flex: 1 1 45%;
+}
+
+.footer .link:nth-child(1){
+    margin-left: 10px;
+}
+.footer .link:nth-child(3){
+    flex: 0 1 300px;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+.footer .link:nth-child(2) ul{
+    width: 50%;
+}
+.footer .link:nth-child(4){
+    margin-top: 100px;
+}
+.footer .link:nth-child(4) .wrap{
+    width: 70%;
+}
+.footer .link:nth-child(4) p:first-child img{
+    width: 6%;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.footer .link:nth-child(4) p:last-child img:nth-of-type(1){
+    width: 10%;
+}
+.footer .link:nth-child(4) p:last-child img:nth-of-type(2){
+    width: 13%;
+}
