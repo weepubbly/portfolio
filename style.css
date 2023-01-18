@@ -1,0 +1,442 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a:link , a:visited{text-decoration: none; color: #333;}
+#home{
+    width: 100%;
+    height: 100vh;
+    background-color: #0d5c4c;
+    position: relative;
+}
+#home .center1{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    border-radius: 50%;
+}
+#home .center2{
+    width: 415px;
+    height: 215px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+}
+#home .center3{
+    width: 430px;
+    height: 230px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+}
+#home .title{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font: normal 4em 'Lobster', cursive;
+}
+#home .header{
+    position: fixed;
+    z-index: 19;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1920px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.4s;
+}
+.header .logo{
+    flex: 1 1 10%;
+    margin-left: 40px;
+    margin-top: 11px;
+}
+.header .logo img{
+    height: 50px;
+}
+.header ul{
+    flex: 0 1 30%;
+    display: flex;
+}
+.header li{
+    flex: 1 1 25%;
+    line-height: 70px;
+    text-align: center;
+}
+.header li a{
+    font: bold 1.2em 'Rajdhani';
+    color: white;
+}
+#home .sub{
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#home .sub p{
+    flex: 1 1 33.3%;
+    font: normal 0.8em 'Nanum Gothic';
+    color: white;
+}
+#home .sub p:nth-child(1){
+    margin-left: 30px;
+}
+#home .sub p:nth-child(2){
+    text-align: center;
+}
+#home .sub p:nth-child(3){
+    text-align: right;
+    margin-right: 30px;
+}
+
+/*----------------2 페이지------------------*/
+#about{
+    width: 100%;
+    height: 100vh;
+    background-color: #acc6c0;
+    /* background-color: white; */
+    background-attachment: fixed;
+    position: relative;
+}
+#about h1{
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #0d5c4c;
+    font: bold 3em 'Rajdhani';
+}
+#about .wrap{
+    width: 70%;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+}
+#about .profile{
+    width:300px;
+    height: 300px;
+    font-family: 'Nanum Gothic';
+    position: relative;
+}
+#about .profile .subtext{
+    position: absolute;
+    z-index: 2;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#about .edu{
+    width: 380px;
+    height: 300px;
+    position: relative;
+}
+#about .edu .subtext2{
+    position: absolute;
+    z-index: 2;
+    width: 95%;
+    left: 55%;
+    transform: translateX(-50%);
+}
+#about .etc{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+#about .etc .subtext3{
+    position: absolute;
+    z-index: 2;
+    width: 90%;
+    left: 60%;
+    transform: translateX(-50%);
+}
+#about h3{
+    font: bold 1.3em 'Rajdhani';
+}
+#about .profile p:nth-of-type(1){
+    font: bold 1em 'Nanum Gothic';
+}
+#about .profile p:nth-of-type(2){
+    font: bold 1em 'Nanum Gothic';
+}
+#about .profile p:nth-of-type(3){
+    font: normal 1em 'Nanum Gothic';
+}
+#about .profile p:nth-of-type(5){
+    font: bold 1em 'Nanum Gothic';
+}
+#about .profile p:nth-of-type(6),
+#about .profile p:nth-of-type(7){
+    font: normal 1em 'Nanum Gothic';
+}
+
+#about .edu p:nth-of-type(1),
+#about .edu p:nth-of-type(2),
+#about .edu p:nth-of-type(3){
+    font: normal 1em 'Nanum Gothic';
+    margin-bottom: 10px;
+}
+#about .edu p:nth-of-type(1) span,
+#about .edu p:nth-of-type(2) span,
+#about .edu p:nth-of-type(3) span{
+    font: bold 1em 'Nanum Gothic';
+}
+
+#about .etc p:nth-of-type(1),
+#about .etc p:nth-of-type(2){
+    font: normal 1em 'Nanum Gothic';
+    margin-bottom: 10px;
+}
+#about .etc p:nth-of-type(1) span,
+#about .etc p:nth-of-type(2) span{
+    font: bold 1em 'Nanum Gothic';
+}
+#about .icontitle{
+    text-align: center;
+    margin-bottom: 30px;
+}
+#about img{
+    height: 70px;
+}
+
+/*----------------3 페이지------------------*/
+#skills{
+    width: 100%;
+    height: 100vh;
+    background-color: #acc6c0;
+    background-attachment: fixed;
+    position: relative;
+}
+#skills h1{
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #0d5c4c;
+    font: bold 3em 'Rajdhani';
+}
+#skills .box{
+    position: absolute;
+    z-index: 2;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 100px;
+    margin: auto;
+}
+#skills .box ul{
+    width: 100%;
+    /* display: flex; */
+}
+#skills .box li{
+    /* flex: 1 1 25%; */
+    text-align: center;
+    font: bold 1em 'Nanum Gothic';
+}
+#skills .box li:nth-child(1){
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 10%;
+    transform: translateX(-50%);
+}
+#skills .box li:nth-child(2){
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 37%;
+    transform: translateX(-50%);
+}
+#skills .box li:nth-child(3){
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 64%;
+    transform: translateX(-50%);
+}
+#skills .box li:nth-child(4){
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    left: 90%;
+    transform: translateX(-50%);
+}
+
+#skills svg{
+    width: 100%;
+    height: 100%;
+}
+
+#skills .st0{
+    fill:none;
+    stroke:#E1E1E1;
+    stroke-width:25;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+}
+#skills .st1{
+    fill:none;
+    stroke:#138C75;
+    stroke-width:25;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 401.08;
+    stroke-dashoffset: 401.08;
+}
+#skills .st2{
+    fill:none;
+    stroke:#117560;
+    stroke-width:25;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 401.08;
+    stroke-dashoffset: 401.08;
+}
+#skills .st3{
+    fill:none;
+    stroke:#0D5C4C;
+    stroke-width:25;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 401.08;
+    stroke-dashoffset: 401.08;
+}
+#skills .st4{
+    fill:none;
+    stroke:#06473A;
+    stroke-width:25;
+    stroke-linecap:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 401.08;
+    stroke-dashoffset: 401.08;
+}
+
+.section .ani02{animation: strokeani01 1.5s forwards;}
+.section .ani03{animation: strokeani02 1.5s 0.3s forwards;}
+.section .ani04{animation: strokeani03 1.5s 0.5s forwards;}
+.section .ani05{animation: strokeani04 1.5s 0.7s forwards;}
+
+@keyframes strokeani01{
+    from{stroke-dashoffset: 401.08;}
+    to{stroke-dashoffset: 50;}
+}
+@keyframes strokeani02{
+    from{stroke-dashoffset: 401.08;}
+    to{stroke-dashoffset: 90;}
+}
+@keyframes strokeani03{
+    from{stroke-dashoffset: 401.08;}
+    to{stroke-dashoffset: 50;}
+}
+@keyframes strokeani04{
+    from{stroke-dashoffset: 401.08;}
+    to{stroke-dashoffset: 50;}
+}
+
+
+/*----------------4 페이지------------------*/
+#work{
+    width: 100%;
+    height: 100vh;
+    background-color: #acc6c0;
+    background-attachment: fixed;
+    position: relative;
+}
+#work h1{
+    position: absolute;
+    z-index: 2;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #0d5c4c;
+    font: bold 3em 'Rajdhani';
+}
+#work .workwrap{
+    width: 100%;
+    max-width: 1000px;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-between;
+}
+.workwrap .box{
+    flex: 0 1 220px;
+    height: 220px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 2px 2px 10px #333;
+    cursor: pointer;
+}
+.workwrap .box::before{
+    content: '';
+    position: absolute;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.workwrap .box:hover::before{
+    display: block;
+}
+.workwrap .box img{
+    position: absolute;
+    z-index: 3;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.workwrap .box .boxtitle{
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 115%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font: bold 1em 'Nanum Gothic';
+    text-align: center;
+}
+.workwrap .hide{
+    position: absolute;
+    z-index: 5;
+    color: white;
+    font: bold 1.2em 'Nanum Gothic';
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
