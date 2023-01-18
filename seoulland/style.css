@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a:link , a:visited{text-decoration: none; color: #333;}
+
+header{
+    width: 100%;
+    height: 30px;
+}
+header .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    align-items: center;
+}
+header ul{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 30px;
+    display: flex;
+}
+header li{
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+}
+header li a{
+    font: bold 0.7em 'Nanum Gothic';
+}
+header li:nth-child(1){flex: 1 1 12%;}
+header li:nth-child(1) a{color: orange;}
+header li:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    top: 58%;
+    left: 92.5%;
+    transform: translateY(-55%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+header li:nth-child(2){flex: 1 1 13%;}
+header li:nth-child(2)::after{
+    content: '';
+    position: absolute;
+    top: 58%;
+    left: 101.5%;
+    transform: translateY(-55%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+header li:nth-child(3){flex: 1 1 20%;}
+header li:nth-child(3)::after{
+    content: '';
+    position: absolute;
+    top: 58%;
+    left: 99%;
+    transform: translateY(-55%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+header li:nth-child(4){flex: 1 1 13%;}
+header li:nth-child(5){flex: 1 1 30%;}
+
+nav{
+    width: 100%;
+    height: 75px; /*호버시 285px*/
+    position: relative;
+}
+nav .wrap{
+    position: absolute;
+    z-index: 101;
+    width: 100%;
+    height: 75px; /*호버시 285px*/
+    border-bottom: 3px solid red;
+    overflow: hidden;
+    transition: all 0.3s;
+    background-color: white;
+}
+nav .menu{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+nav .logo{
+    width: 175px;
+}
+nav .logo img:nth-child(2){
+    margin-top: 45px;
+}
+nav ul{
+    width: 60%;
+    display: flex;
+}
+nav li{
+    flex: 1 1 20%;
+    line-height: 75px;
+    text-align: center;
+}
+nav li a{
+    font: bold 1em 'Nanum Gothic';
+}
+nav li dl{
+    width: 100%;
+    height: 210px;
+}
+nav dl a{
+    font: normal 0.8em 'Nanum Gothic';
+}
+nav dt, nav dd{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+nav .shop{
+    line-height: 105px;
+}
+
+
+.banner{
+    width: 100%;
+    position: relative;
+}
+.banner img{
+    width: 100%;
+}
+
+.content{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.content .hour{flex: 1 1 20%;}
+.content .dc{flex: 1 1 20%;}
+.content .news{flex: 1 1 30%;}
+.content .sns{flex: 1 1 30%;}
+
+.footer1{
+    width: 100%;
+    height: 34px;
+    background-color: #eee;
+}
+.footer1 .wrap{
+    width: 1100px;
+    margin: auto;
+    position: relative;
+}
+.footer1 .rights{
+    width: 40%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+.footer1 .rights li{
+    text-align: center;
+    line-height: 30px;
+    position: relative;
+}
+.footer1 .rights li a{
+    font: bold 0.7em 'Nanum Gothic';
+}
+.footer1 .rights li:nth-child(1){
+    flex: 1 1 13%;
+}
+.footer1 .rights li:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 58%;
+    left: 96.5%;
+    transform: translateY(-55%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+.footer1 .rights li:nth-child(2){flex: 1 1 13%;}
+.footer1 .rights li:nth-child(2)::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 58%;
+    left: 100.5%;
+    transform: translateY(-55%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+.footer1 .rights li:nth-child(3){flex: 1 1 13%;}
+.footer1 .rights li:nth-child(3)::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 58%;
+    left: 99.5%;
+    transform: translateY(-55%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+.footer1 .rights li:nth-child(4){flex: 1 1 13%;}
+.footer1 .rights li:nth-child(4)::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 58%;
+    left: 102.5%;
+    transform: translateY(-55%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+.footer1 .rights li:nth-child(5){flex: 1 1 24%;}
+.footer1 .rights li:nth-child(5)::after{
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 58%;
+    left: 96.5%;
+    transform: translateY(-55%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: #333;
+}
+.footer1 .rights li:nth-child(6){flex: 1 1 24%;}
+
+.footer1 .icon{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    display: flex;
+}
+.footer2{
+    width: 100%;
+    margin-top: 20px;
+}
+.footer2 .wrap{
+    width: 1100px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer2 .logogray{
+    flex: 1 1 15%;
+    width: 88px;
+}
+.footer2 .logogray img{
+    margin-left: 10px;
+}
+.footer2 .text{
+    flex: 1 1 70%;
+    color: #999;
+    font: bold 0.7em 'Nanum Gothic';
+}
+.footer2 .text p:nth-of-type(2){
+    line-height: 20px;
+}
+.footer2 .text p:nth-of-type(3){
+    line-height: 30px;
+}
+.footer2 #site{
+    flex: 1 1 15%;
+    height: 18px;
+    font: normal 0.8em 'Nanum Gothic';
+}
