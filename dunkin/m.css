@@ -1,0 +1,133 @@
+.header ul:nth-of-type(1) , .header ul:nth-of-type(2){
+    display: none;
+}
+.header h2{
+    text-align: center;
+    flex:1 1 100%;
+}
+
+.nav{
+    display: none;
+}
+
+.new div{
+    flex: 1 1 100%;
+    text-align: center;
+    height: 200px;
+}
+.new div:nth-child(1) img{
+    left:50%;
+    transform: translateX(-50%);
+}
+
+.new div:nth-child(1) p{
+    left:50%;
+    transform: translateX(-50%)
+}
+.new .line{
+    margin: auto;
+}
+.event div{
+    flex:1 1 100%;
+}
+.event ul{
+    margin: auto;
+    margin-bottom:15px;
+}
+.event li:nth-child(1){
+    height: 400px;
+}
+
+.event li:nth-child(3){
+    height: 40px;
+}
+.content img:nth-child(1){
+    width:30%;
+}
+.content img:nth-child(2){
+    width:30%;
+    top:80%;
+    right:13%;
+}
+.menu .wrap div{
+    flex:1 1 100%;
+}
+.menu li h2{
+    margin: auto;
+}
+
+.header svg{
+    display: block;
+    width:5%;
+    margin-left:5px;
+    fill:goldenrod;
+}
+
+.gnb{
+    position: fixed;
+    display: block;
+    z-index: 10;
+    width:100%;
+    height: 100%;
+    left:-100%;
+    top:0;
+    background: hsla(0,0%,0%,0.6);
+    color:white;
+    transition: all 0.4s;
+}
+.gnb .wrap{
+    width:80%;
+    height: 80%;
+}
+.gnb ul{
+    width:80%;
+    height: 100%;
+    background: goldenrod;
+}
+.gnb li{
+    width:100%;
+    height: 11.1%;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-top:15px;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+    font-family: 'Anton';
+    position: relative;
+    overflow: hidden;
+}
+.gnb li p{
+    width:100%;
+    height: 50%;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-top:20px;
+}
+.gnb li svg{
+    position: absolute;
+    top:50%;
+    right:5px;
+    z-index: 10;
+    width:30px;
+    height: 30px;
+    fill:white;
+    transform:translateY(-50%) rotate(180deg);
+}
+
+.gnb .close{
+    fill:white;
+    width: 8%;
+    position: absolute;
+    z-index: 10;
+    right:5px;
+}
+
+.event ul{
+    width: 332px !important;
+    overflow: hidden;
+}
+.event .bx-viewport{
+    width: 332px !important;
+    margin: auto;
+}
