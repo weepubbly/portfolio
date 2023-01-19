@@ -24,7 +24,7 @@
         <nav>
             <p>인사정보</p>
             <ul>
-                <li>인사정보등록</li>
+                <li class="insertlist">인사정보등록</li>
                 <li>사원명부/인사기록카드</li>
                 <li>인사발령등록</li>
             </ul>
@@ -68,8 +68,8 @@
                             <p><input type="text" name="dob" id="dob"></p>
                         </li>
                         <li>
-                            <p>연락처</p>
-                            <p><input type="text" name="phone" id="phone"></p>
+                            <p>이메일</p>
+                            <p><input type="email" name="email" id="email"></p>
                         </li>
                     </ul>
                     <ul>
@@ -82,12 +82,19 @@
                             <p><input type="date" name="start" id="start"></p>
                         </li>
                         <li>
-                            <p>주민등록번호</p>
-                            <p><input type="text" name="idnum" id="idnum"></p>
+                            <p>연락처</p>
+                            <p><input type="text" name="phone" id="phone"></p>
                         </li>
                         <li>
-                            <p>이메일</p>
-                            <p><input type="email" name="email" id="email"></p>
+                            <p>구분</p>
+                            <!-- <p>
+                                <select  id="statement">
+                                    <option value="재직">재직</option>
+                                    <option value="퇴직">퇴직</option>
+                                </select>
+                            </p> -->
+                            
+                            <p><input type="text" name="statement" id="statement"></p>
                         </li>
                     </ul>
                 </div>
@@ -104,9 +111,9 @@
                     <li>영문성명</li>
                     <li>입사일자</li>
                     <li>생년월일</li>
-                    <li>주민등록번호</li>
                     <li>연락처</li>
                     <li>이메일</li>
+                    <li>구분</li>
                 </ul>
                 <div id="content"></div>
             </div>

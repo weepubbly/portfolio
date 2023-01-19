@@ -68,6 +68,9 @@ nav li{
     width: 100%;
     line-height: 40px;
 }
+nav .insertlist{
+    background-color: #eee;
+}
 nav li:hover{
     background-color: #eee;
 }
@@ -235,8 +238,9 @@ main .insertmember{
 }
 .memberlist #title{
     width: 100%;
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
+    /* border-top: 1px solid #333;
+    border-bottom: 1px solid #333; */
+    background-color: #eee;
     display: flex;
 }
 .memberlist li{
