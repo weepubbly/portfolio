@@ -46,12 +46,12 @@
     keyboardEnabled: false,
 
     // PAGER
-    pager: true,
-    pagerType: 'full',
-    pagerShortSeparator: ' / ',
-    pagerSelector: null,
-    buildPager: null,
-    pagerCustom: null,
+    // pager: true,
+    // pagerType: 'full',
+    // pagerShortSeparator: ' / ',
+    // pagerSelector: null,
+    // buildPager: null,
+    // pagerCustom: null,
 
     // CONTROLS
     controls: true,

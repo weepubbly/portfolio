@@ -73,11 +73,11 @@ a:link , a:visited{text-decoration: none; color: #333;}
     height: 50px;
 }
 .header ul{
-    flex: 0 1 30%;
+    flex: 0 1 35%;
     display: flex;
 }
 .header li{
-    flex: 1 1 25%;
+    flex: 1 1 20%;
     line-height: 70px;
     text-align: center;
 }
@@ -115,19 +115,31 @@ a:link , a:visited{text-decoration: none; color: #333;}
 #about{
     width: 100%;
     height: 100vh;
-    background-color: #acc6c0;
-    /* background-color: white; */
+    /* background-color: #acc6c0; */
     background-attachment: fixed;
     position: relative;
 }
-#about h1{
+#about .container{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+#about h2{
     position: absolute;
-    z-index: 2;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #0d5c4c;
-    font: bold 3em 'Rajdhani';
+    z-index: 10;
+    left: 0;
+    font: bold 1.7em 'Rajdhani';
+    padding-top: 220px;
+}
+#about h2::before{
+    content: '01';
+    position: absolute;
+    z-index: -1;
+    color: #ddd;
+    font-size: 180px;
+    left: -70px;
+    top: 85px;
+    font-family: 'Rajdhani';
 }
 #about .wrap{
     width: 70%;
@@ -228,18 +240,30 @@ a:link , a:visited{text-decoration: none; color: #333;}
 #skills{
     width: 100%;
     height: 100vh;
-    background-color: #acc6c0;
     background-attachment: fixed;
     position: relative;
 }
-#skills h1{
+#skills .container{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+#skills h2{
     position: absolute;
-    z-index: 2;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #0d5c4c;
-    font: bold 3em 'Rajdhani';
+    z-index: 10;
+    left: 0;
+    font: bold 1.7em 'Rajdhani';
+    padding-top: 220px;
+}
+#skills h2::before{
+    content: '02';
+    position: absolute;
+    z-index: -1;
+    color: #ddd;
+    font-size: 180px;
+    left: -70px;
+    top: 85px;
+    font-family: 'Rajdhani';
 }
 #skills .box{
     position: absolute;
@@ -365,78 +389,145 @@ a:link , a:visited{text-decoration: none; color: #333;}
 #work{
     width: 100%;
     height: 100vh;
-    background-color: #acc6c0;
     background-attachment: fixed;
     position: relative;
 }
-#work h1{
-    position: absolute;
-    z-index: 2;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: #0d5c4c;
-    font: bold 3em 'Rajdhani';
-}
-#work .workwrap{
+#work .slide{
     width: 100%;
-    max-width: 1000px;
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: flex;
-    justify-content: space-between;
+    height: 100vh;
 }
-.workwrap .box{
-    flex: 0 1 220px;
-    height: 220px;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    position: relative;
-    box-shadow: 2px 2px 10px #333;
-    cursor: pointer;
-}
-.workwrap .box::before{
-    content: '';
-    position: absolute;
-    z-index: 4;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.3);
-    display: none;
-}
-.workwrap .box:hover::before{
-    display: block;
-}
-.workwrap .box img{
-    position: absolute;
-    z-index: 3;
+#work .slide .container{
     width: 90%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    position: relative;
 }
-.workwrap .box .boxtitle{
+#work .container h2{
     position: absolute;
-    z-index: 3;
+    left: 0;
+    font: bold 1.7em 'Rajdhani';
+    padding-top: 220px;
+}
+#work .container h2::before{
+    content: '03';
+    position: absolute;
+    z-index: -1;
+    color: #ddd;
+    font-size: 180px;
+    left: -70px;
+    top: 85px;
+    font-family: 'Rajdhani';
+}
+#work .container .slide_bar{
+    position: absolute;
+    right: 5%;
+    top: 25%;
+}
+#work .current_page{
+    padding-bottom: 15px;
+    color: red;
+}
+#work .total_page{
+    padding-top: 15px;
+}
+#work .slide_bar .bar{
+    width: 1px;
+    height: 100px;
+    background-color: #ddd;
+    margin-left: 8px;
+}
+#work .slide .publishing{
+    display: flex;
+}
+#work .slide .publishing .left_txt{
+    padding: 300px 0 0 190px;
+}
+#work .left_txt .sitetitle{
+    font: normal 1.5em 'Rajdhani';
+    padding-bottom: 20px;
+    color: black;
+}
+#work .left_txt p{
+    font: normal 1.1em 'Nanum Gothic';
+    color: #333;
+}
+#work .view{
+    cursor: pointer;
+    margin-top: 70px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #555;
+    text-align: center;
+    box-sizing: border-box;
+    font: normal 1em 'Rajdhani';
+    padding-top: 9px;
+}
+#work .slide img{
+    width: 60%;
+}
+#work .slide .publishing_img{
+    margin: 180px 0 0 55px;
+}
+
+
+/*----------------4 페이지------------------*/
+#admin{
     width: 100%;
-    top: 115%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    font: bold 1em 'Nanum Gothic';
-    text-align: center;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
 }
-.workwrap .hide{
+#admin .container{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+#admin h2{
     position: absolute;
-    z-index: 5;
-    color: white;
-    font: bold 1.2em 'Nanum Gothic';
+    z-index: 10;
+    left: 0;
+    font: bold 1.7em 'Rajdhani';
+    padding-top: 220px;
+}
+#admin h2::before{
+    content: '04';
+    position: absolute;
+    z-index: -1;
+    color: #ddd;
+    font-size: 180px;
+    left: -70px;
+    top: 85px;
+    font-family: 'Rajdhani';
+}
+
+#admin .publishing{
+    display: flex;
+}
+#admin .publishing .left_txt{
+    padding: 300px 0 0 190px;
+}
+#admin .left_txt .sitetitle{
+    font: normal 1.5em 'Rajdhani';
+    padding-bottom: 20px;
+    color: black;
+}
+#admin .left_txt p{
+    font: normal 1.1em 'Nanum Gothic';
+    color: #333;
+}
+#admin .view{
+    cursor: pointer;
+    margin-top: 70px;
+    width: 200px;
+    height: 40px;
+    border: 1px solid #555;
     text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
+    box-sizing: border-box;
+    font: normal 1em 'Rajdhani';
+    padding-top: 9px;
+}
+#admin img{
+    width: 60%;
+}
+#admin .publishing_img{
+    margin: 200px 0 0 55px;
 }

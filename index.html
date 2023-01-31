@@ -8,7 +8,9 @@
     <script src="jquery.min.js"></script>
     <script src="jquery.mousewheel.js"></script>
     <script src="jquery-ui.js"></script>
+    <script src="jquery.bxslider.js"></script>
     <script src="index.js" defer></script>
+    <link rel="stylesheet" href="jquery.bxslider.css">
     <link rel="stylesheet" href="jquery-ui.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +22,8 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#work">WORK</a></li>
+                <li><a href="#work">PUBLISHING</a></li>
+                <li><a href="#admin">ADMIN</a></li>
             </ul>
         </div>
         <div class="center1"></div>
@@ -28,13 +31,15 @@
         <div class="center3"></div>
         <p class="title">Portpolio</p>
         <div class="sub">
-            <p>Web Publisher</p>
+            <p>2023</p>
             <p>Portpolio</p>
             <p>KWON NAEKYEONG</p>
         </div>
     </div>
     <div id="about" class="section">
-        <h1>ABOUT</h1>
+        <div class="container">
+            <h2>ABOUT ME</h2>
+        </div>
         <div class="wrap">
             <div class="profile">
                 <div class="icontitle">
@@ -77,7 +82,9 @@
         </div>
     </div>
     <div id="skills" class="section">
-        <h1>SKILLS</h1>
+        <div class="container">
+            <h2>SKILLS</h2>
+        </div>
         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1366 768" style="enable-background:new 0 0 1366 768;" xml:space="preserve">
         <path class="st0" d="M300.6,319.7c-34.9,0.7-63,29.2-63,64.3c0,35.5,28.8,64.3,64.3,64.3s64.3-28.8,64.3-64.3
             c0-34.9-27.8-63.4-62.6-64.3"/>
@@ -107,27 +114,93 @@
         </div>
     </div>
     <div id="work" class="section">
-        <h1>WORK</h1>
+        <div class="slide">
+            <div class="container">
+                <h2>PUBLISHING</h2>
+                <div class="slide_bar">
+                    <p class="current_page">01</p>
+                    <div class="bar"></div>
+                    <p class="total_page">03</p>
+                </div>
+                <div class="publishing">
+                    <div class="left_txt">
+                        <p class="sitetitle">National Museum of Korea</p>
+                        <p>반응형으로 제작한 국립중앙박물관 사이트입니다.</p>
+                        <p class="view" onclick="window.open('about:blank').location.href='./museum/index.html'">VIEW</p>
+                    </div>
+                    <div class="publishing_img"><img src="img/museum_react.png" alt="이미지"></div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="container">
+                <h2>PUBLISHING</h2>
+                <div class="slide_bar">
+                    <p class="current_page">02</p>
+                    <div class="bar"></div>
+                    <p class="total_page">03</p>
+                </div>
+                <div class="publishing">
+                    <div class="left_txt">
+                        <p class="sitetitle">Dunkin Donuts</p>
+                        <p>고정형으로 제작한 던킨도너츠 사이트입니다.</p>
+                        <p class="view" onclick="window.open('about:blank').location.href='./dunkin/index.html'">VIEW</p>
+                    </div>
+                    <div class="publishing_img"><img src="img/dunkin_pc.png" alt="이미지"></div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="container">
+                <h2>PUBLISHING</h2>
+                <div class="slide_bar">
+                    <p class="current_page">03</p>
+                    <div class="bar"></div>
+                    <p class="total_page">03</p>
+                </div>
+                <div class="publishing">
+                    <div class="left_txt">
+                        <p class="sitetitle">Seoul Land</p>
+                        <p>고정형으로 제작한 구버전 서울랜드 사이트입니다.</p>
+                        <p class="view" onclick="window.open('about:blank').location.href='./seoulland/index.html'">VIEW</p>
+                    </div>
+                    <div class="publishing_img"><img src="img/seoulland_pc.png" alt="이미지"></div>
+                </div>
+            </div>
+        </div>
+        <!-- <h1>WORK</h1>
         <div class="workwrap">
-            <div class="box" onclick="window.open('about:blank').location.href='./dunkin/index.html'">
+            <div class="box" onclick="location.href='./dunkin/index.html'" target="_blank">
                 <img src="img/dunkin_pc.png" alt="이미지">
                 <p class="boxtitle">던킨 도너츠</p>
                 <p class="hide">메인페이지<br>고정형</p>
             </div>
-            <div class="box" onclick="window.open('about:blank').location.href='./seoulland/index.html'">
+            <div class="box" onclick="location.href='./seoulland/index.html'" >
                 <img src="img/seoulland_pc.png" alt="이미지">
                 <p class="boxtitle">서울랜드</p>
                 <p class="hide">메인페이지<br>고정형</p>
             </div>
-            <div class="box" onclick="window.open('about:blank').location.href='./museum/index.html'">
+            <div class="box" onclick="location.href='./museum/index.html'">
                 <img src="img/museum_react.png" alt="이미지">
                 <p class="boxtitle">국립중앙박물관</p>
                 <p class="hide">메인페이지<br>반응형</p>
             </div>
-            <div class="box" onclick="window.open('about:blank').location.href='./admin/index.html'">
+            <div class="box" onclick="location.href='./admin/index.html'" >
                 <img src="img/admin_pc.png" alt="이미지">
                 <p class="boxtitle">관리자 페이지</p>
-                <p class="hide">인사관리<br>고정형</p>
+            </div> 
+        </div> -->
+    </div>
+    <div id="admin" class="section">
+        <div class="container">
+            <h2>ADMIN PAGE</h2>
+            <div class="publishing">
+                <div class="left_txt">
+                    <p class="sitetitle">HR CRM</p>
+                    <p>ajax를 사용하여 제작한 인사관리 페이지입니다. json 데이터 불러오기, 작성하기 기능을 사용할 수 있습니다.</p>
+                    <p class="view" onclick="window.open('about:blank').location.href='./admin/index.html'">VIEW</p>
+                </div>
+                <div class="publishing_img"><img src="img/admin_pc.png" alt="이미지"></div>
             </div>
         </div>
     </div>
