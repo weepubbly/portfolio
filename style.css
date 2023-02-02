@@ -1,533 +1,882 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic&family=Righteous&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
-*{margin: 0; padding: 0;}
-ul{list-style: none;}
-a:link , a:visited{text-decoration: none; color: #333;}
-#home{
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&family=Nanum+Gothic&family=Noto+Sans+KR&display=swap');
+*{
+    margin:0;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+
+a:link , a:visited{
+    text-decoration: none;
+}
+
+/*---------------- 헤더 메뉴 ----------------*/
+/* .fixmenu{
+    position: fixed;
+    z-index: 100;
     width: 100%;
-    height: 100vh;
-    background-color: #0d5c4c;
+} */
+.header{
+    width:100%;
+    height: 120px;
+    background-color: #f8faf0;
     position: relative;
 }
-#home .center1{
-    width: 400px;
-    height: 200px;
+.header .hide{
     position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid white;
-    border-radius: 50%;
-}
-#home .center2{
-    width: 415px;
-    height: 215px;
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-}
-#home .center3{
-    width: 430px;
-    height: 230px;
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 50%;
-}
-#home .title{
-    position: absolute;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font: normal 4em 'Lobster', cursive;
-}
-#home .header{
-    position: fixed;
-    z-index: 19;
-    top: 0;
-    left: 0;
+    z-index: 101;
     width: 100%;
-    max-width: 1920px;
-    height: 70px;
+    left: 0;
+    top: -210px;
+    transition: all 0.3s;
+}
+.header .hide .topmenu{
+    width: 100%;
+    height: 214px; /*클릭시 214px*/
+    background-color: #2c1810;
+    position: relative;
+    z-index: 101;
+}
+.header .topmenu .topimg{
+    width: 100%;
+    height: 214px;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 75%;
+    transform: translateX(-50%);
+}
+.header #monthly{
+    position: absolute;
+    z-index: 200;
+    right:10%;
+    top:214px;
+    width: 150px;
+    height: 20px;
+    background-color: #2c1810;
+    color:orange;
+    font: normal 0.7em 'Nanum Gothic';
+    border-radius: 0 0 5px 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    outline: 0;
+    border:0;
+    cursor: pointer;
+}
+
+.header .wrap{
+    width:100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    background: rgba(0, 0, 0, 0);
-    transition: all 0.4s;
+    align-items: center;
 }
-.header .logo{
-    flex: 1 1 10%;
-    margin-left: 40px;
-    margin-top: 11px;
-}
-.header .logo img{
-    height: 50px;
-}
-.header ul{
-    flex: 0 1 35%;
+
+.header ul:nth-of-type(1){
+    flex:1 1 20%;
     display: flex;
+    align-items: center;
 }
-.header li{
-    flex: 1 1 20%;
-    line-height: 70px;
+.header ul:nth-of-type(1) li{
+    flex:1 1 16.6%;
+    text-transform: uppercase;
+    text-align: center;
+    font: bold 0.8em 'Nanum Gothic';
+}
+.header ul:nth-of-type(1) a{
+    color:#553223;
+}
+.header h2{
+    flex:0 1 30%;
     text-align: center;
 }
-.header li a{
-    font: bold 1.2em 'Rajdhani';
-    color: white;
+.header ul:nth-of-type(2){
+    flex:1 1 20%;
+    display: flex;
+    align-items: center;
 }
-#home .sub{
+.header ul:nth-of-type(2) li{
+    flex:1 1 25%;
+    text-transform: uppercase;
+    text-align: center;
+    font: bold 0.8em 'Nanum Gothic';
+}
+.header ul:nth-of-type(2)  a{
+    color:#553223;
+}
+.header .txt:link , .header .txt:visited{
+    color:orange;
+}
+
+/*---------------- 내비게이션 메뉴 ----------------*/
+.nav{
+    width:100%;
+    height: 55px;
+    border-top:1px solid #eee;
+    background-color: white;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+.nav .circlefix1,.nav .circlefix2,
+.nav .circlefix3,.nav .circlefix4,
+.nav .circlefix5,.nav .circlefix6,
+.nav .circlefix7{
+    position: relative;
+}
+.nav .circle{
     position: absolute;
-    z-index: 2;
+    z-index: 101;
+    width: 13px;
+    height: 0;
+    border-radius: 50%;
+    background-color: orange;
+    top: 29px;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 20px;
+}
+.nav ul{
+    width:100%;
+    max-width: 1200px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.nav li{
+    font:bold 0.8em 'Nanum Gothic';
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
+.nav li:nth-of-type(1),
+.nav li:nth-of-type(2),
+.nav li:nth-of-type(4),
+.nav li:nth-of-type(5),
+.nav li:nth-of-type(6),
+.nav li:nth-of-type(8){
+    flex: 1 1 9%;
+}
+.nav li:nth-of-type(3),
+.nav li:nth-of-type(7){
+    flex: 1 1 16%;
+}
+.nav li:nth-of-type(9){
+    flex: 1 1 14%;
+}
+.nav li a:link , .nav li a:visited{
+    color:rgb(58, 58, 58);
+}
+.nav li:nth-child(1) a:link , 
+.nav li:nth-child(1) a:visited,
+.nav li:nth-child(2) a:link , 
+.nav li:nth-child(2) a:visited{
+    color: #cebea2;
+}
+.nav .sub{  
     width: 100%;
+    height: 0;
+    position: absolute;
+    z-index: 100;
+    left:0;
+    top:55px;
+    background-color: white;
+    border-bottom:1px solid black;
+    transition: all 0.4s;
+    overflow: hidden;
+}
+.nav .sub dt a{
+    font: normal 1em 'Namun Gothic';
+    color: #333;
+    letter-spacing: 0px;
+}
+.nav .sub dd a{
+    font: normal 1em 'Namun Gothic';
+    color: #888;
+    letter-spacing: 0px;
+}
+
+.nav .subwrap1{
+    width:100%;
+    max-width: 1200px;
+    height: 350px;
+    margin: auto;
+    padding-top: 30px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.nav .subwrap1 dl{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav .subwrap1 img{
+    flex: 1 1 33.3%;
+    width: 90%;
+}
+.nav .subwrap2{
+    width:50%;
+    max-width: 1200px;
+    height: 350px;
+    padding-top: 30px;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+}
+.nav .subwrap2 dl{
+    align-items: center;
+    flex: 1 1 25%;
+    text-align: left;
+}
+.nav .subwrap2 dt{
+    line-height: 50px;
+}
+.nav .subwrap3{
+    width:100%;
+    max-width: 1200px;
+    height: 350px;
+    padding-top: 30px;
+    margin: auto;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
 }
-#home .sub p{
-    flex: 1 1 33.3%;
-    font: normal 0.8em 'Nanum Gothic';
-    color: white;
+.subwrap3 .tt{
+    line-height: 50px;
 }
-#home .sub p:nth-child(1){
-    margin-left: 30px;
+.nav .subwrap3 dl:nth-of-type(1),
+.nav .subwrap3 dl:nth-of-type(2){
+    flex: 1 1 20%;
+    text-align: left;
 }
-#home .sub p:nth-child(2){
+.nav .subwrap3 dl:nth-of-type(3),
+.nav .subwrap3 dl:nth-of-type(4){
+    flex: 1 1 20%;
+    align-content: flex-end;
+}
+.nav .subwrap3 dl{
+    line-height: 20px;
+}
+.nav .subwrap4{
+    width:90%;
+    max-width: 1200px;
+    height: 350px;
+    padding-top: 30px;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+}
+.nav .subwrap4 dl{
+    align-items: center;
+    flex: 1 1 20%;
+    text-align: left;
+}
+.nav .subwrap4 dt{
+    line-height: 60px;
+}
+.nav .subwrap4 dd{
+    line-height: 20px;
+}
+.nav .subwrap5{
+    width:30%;
+    max-width: 1200px;
+    height: 350px;
+    padding-top: 30px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.nav .subwrap5 dl{
+    align-items: center;
+    text-align: left;
+}
+.nav .subwrap5 dt{
+    line-height: 50px;
+}
+.nav .subwrap6{
+    width:100%;
+    max-width: 1200px;
+    height: 350px;
+    padding-top: 30px;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+}
+.nav .subwrap6 dl{
+    align-items: center;
     text-align: center;
+    flex: 0 1 20%;
 }
-#home .sub p:nth-child(3){
+.nav .subwrap6 dt{
+    line-height: 50px;
+}
+.nav .subwrap6 img{
     text-align: right;
-    margin-right: 30px;
+    width: 365px;
+    height: 248px;
 }
 
-/*----------------2 페이지------------------*/
-#about{
-    width: 100%;
-    height: 100vh;
-    /* background-color: #acc6c0; */
-    background-attachment: fixed;
-    position: relative;
-}
-#about .container{
-    width: 90%;
+.nav .subwrap7{
+    width:100%;
+    max-width: 1200px;
+    height: 350px;
     margin: auto;
+    padding-top: 30px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.nav .subwrap7 dl{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav .subwrap7 img{
+    flex: 1 1 50%;
+    width: 90%;
+}
+
+.nav .align{
+    text-align: left;
+}
+.nav .align:nth-child(1){
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+/*----------------슬라이드 배너----------------*/
+.banner{
+    width:100%;
+    position: relative;
+    z-index: 10;
+}
+.banner img{
+    width: 100%;
+}
+.banner2{
+    display: none;
+}
+
+/*----------------소식 광고 ----------------*/
+.new{
+    width:100%;
+    max-width: 1100px;
+    margin: auto;
+    height: auto;
+    display: flex;
+    flex-wrap:wrap;
+}
+
+.new div{
+    height: 300px;
+    position: relative;
+    margin-top: 50px;
+}
+.new div:nth-child(1){
+    flex: 1 1 25%;
+}
+.new div:nth-child(2){
+    flex: 1 1 25%;
+}
+.new div:nth-child(3){
+    flex: 1 1 50%;
+    text-align: right;
+}
+.new iframe{
+    width:80%;
+    height: 80%;
+}
+.new div:nth-child(1) img{
+    position: absolute;
+    top:0;
+    z-index:2;
+}
+.new div:nth-child(1) p{
+    position: absolute;
+    top: 150px;
+    width:45%;
+    height: 40px;
+    border:1px solid #99958e;
+    border-radius: 10px;
+    text-align: center; 
+    font:bold 0.8em/40px 'Nanum Gothic';
+    background-color: white;
+    color: #99958e;
+    cursor: pointer;
+}
+.new .line{
+    display: block;
+    width:30px;
+    height: 2px;
+    background-color: #cebea2;
+}
+.new div:nth-child(2) p:nth-of-type(1){
+    margin-top:30px;
+    font:bold 1.1em 'Nanum Gothic';
+    color: #333;
+    line-height: 25px;
+}
+.new div:nth-child(2) p:nth-of-type(2){
+    margin-top:5px;
+    font:bold 1.1em 'Nanum Gothic';
+    color: #333;
+}
+.new div:nth-child(2) p:nth-of-type(3){
+    margin-top:10px;
+    font:normal 0.8em 'Anton';
+    color: #99958e;
+}
+/*---------------- 이벤트 ----------------*/
+.event{
+    width:100%;
+    max-width: 1100px;
+    margin: auto;
+    margin-top:20px;
+    margin-bottom: 70px;
+    height: auto;    
+    display: flex;
+    flex-wrap: wrap;
+}
+.event div{
+    flex:1 1 25%;
+}
+.event ul{
+    width:90%;
+    margin: auto;
+    border: 0.5px solid #c1ae96;
+    border-radius: 10px;
+}
+.event li:nth-child(1){
+    width:100%;
+    height: 266px;
+}
+.event li:nth-child(1) img{
+    width:100%;
+    height: 100%;
+    border-radius: 10px 10px 0  0;
+}
+.event li:nth-child(2){
+    width:100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 7px;
+    border-bottom: 1px solid rgb(180, 180, 180);
+}
+.event li:nth-child(3){
+    width:100%;
+    height: 100px;
+    box-sizing: border-box;
+    padding: 7px;
+}
+
+.bx2 .bx2title{
+    font: bold 1.2em 'Nanum Gothic';
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.bx2 p:nth-of-type(2){
+    padding-top: 30px;
+    box-sizing: border-box;
+    font: normal 0.9em 'Nanum Gothic';
+    color:#7d684e;
+}
+.bx2 .detail{
+    font: normal 1.1em 'Nanum Gothic';
+    color: #7d684e;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+/*---------------- 콘텐츠 ----------------*/
+.content{
+    /* width:100%; */
+    height: 400px;
+    position: relative;
+    background: url(./img/img_banner_1_1.jpg) 50% 0;
+    background-attachment: fixed;
+    text-align: center;
+}
+/* .content::before{
+    content:'';
+    display: block;
+    padding-top:20%;
+} */
+.content img:nth-child(1){
+    position: absolute;
+    width: 30%;
+    top:40%;
+    transform: translateY(-50%);
+    left:0%;
+}
+.content img:nth-child(2){
+    position: absolute;
+    width: 30%;
+    top:67%;
+    transform: translateY(-50%);
+    right:0;
+}
+
+.content2{
+    display: none;
+    height: 400px;
+    position: relative;
+    background: url(./img/img_banner_1_1.jpg) 54% 0;
+    background-attachment: fixed;
+    text-align: center;
+}
+.content2 img:nth-child(1){
+    position: absolute;
+    top:40%;
+    transform: translateY(-50%);
+    left:25%;
+}
+.content2 img:nth-child(2){
+    position: absolute;
+    top:67%;
+    transform: translateY(-50%);
+    right:20%;
+}
+
+/*---------------- 메뉴 ----------------*/
+.menu{
+    width:100%;
+    max-width:1200px;
+    margin: auto;
+    height: auto;   
+    margin-top:70px
+}
+.menu h2{
+    text-align: center;
+}
+.menu p{
+    text-align: center;
+}
+.menutxt{
+    margin-top: 20px;
+    font: bold 1.1em 'Nanum Gothic';
+    color:#333;
+    line-height: 40px;
+}
+.menu p:nth-of-type(2), .menu p:nth-of-type(3){
+    font:normal 0.8em 'Anton';
+    color:#888;
+}
+.menu .wrap{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:50px;
+}
+.menu .wrap div{
+    flex:1 1 20%;
+    height: 300px;
+}
+.menu ul{
+    width:95%;
+    height: 100%;
+    margin: auto;
+}
+.menu li:nth-child(1){
+    width:100%;
+    height:70%;
+}
+.menu li:nth-child(2){
+    width:100%;
+    height: 10%;
+    text-align: center;
+    margin-top: 10px;
+    font:bold 1em 'Nanum Gothic';
+}
+.menu li:nth-child(3){
+    width: 100%;
+    height: 20%;
+}
+.menu li:nth-child(3) p{
+    width:60%;
+    height: 50%;
+    border:1px solid #99958e;
+    font:normal 0.75em/2.6em 'Nanum Gothic';
+    text-align: center;
+    margin:5px auto;
+    border-radius: 10px;
+    color: #99958e;
+}
+.menu li h2{
+    background-color: #cebea2;
+    border-radius: 50%;
+    width:210px;
+    height: 210px;
     position: relative;
 }
-#about h2{
+.menu li h2::before{
     position: absolute;
-    z-index: 10;
-    left: 0;
-    font: bold 1.7em 'Rajdhani';
-    padding-top: 220px;
+    z-index: 1;
+    width:101%;
+    height: 101%;
+    content:'';
+    background-color: white;
+    border-radius: 50%;
+    left:-1px;
+    top:-1px;
+    transition: all 0.3s;
 }
-#about h2::before{
-    content: '01';
+.menu li img{
     position: absolute;
-    z-index: -1;
-    color: #ddd;
-    font-size: 180px;
-    left: -70px;
-    top: 85px;
-    font-family: 'Rajdhani';
+    z-index: 2;
+    left:2%;
+    top:0;
+    width:100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: all 0.3s;
 }
-#about .wrap{
-    width: 70%;
-    display: flex;
+.menu li:hover h2::before{
+    left:5px;
+    top:-5px;
+}
+.menu li:hover img{
+    left:5px;
+    top:-5px;
+}
+
+/*---------------- SNS ----------------*/
+.sns{
+    width:100%;
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    margin-top: 80px;
+}
+.sns h2{
+    text-align: center;
+}
+.sns p{
+    text-align: center;
+}
+.sns .sns_wrap{
+    width: 400px;
+    height: 80px;
+    margin: auto;
+    margin-top: 10px;
+}
+.sns_wrap a{
+    position: relative;
+    display: inline-block;
+    width: 62px;
+    height: 62px;
+    margin-left: 10px;
+    border: 1px solid #c8bfb0;
+    border-radius: 50%;
+}
+.sns_wrap a:before{
+    content: '';
     position: absolute;
     left: 50%;
-    top: 80%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    width: 26px;
+    height: 19px;
+    margin: -9px 0 0 -13px;
+    background: url(img/icon_sns_l.png) no-repeat;
+}
+.facebook::before{background-position: 0 0 !important;}
+.insta::before{background-position: 0 -19px !important;}
+.blog::before{background-position: 0 -38px !important;}
+.yt::before{background-position: 0 -57px !important;}
+.twt::before{background-position: 0 -73px !important;}
+
+/*---------------- store ----------------*/
+.store{
+    width:100%;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.store div{
+    flex: 1 1 16.6%;
+}
+.store img{
+    width:100%;
+}
+
+/* .store::before{
+    content:'';
+    display: block;
+    padding-top:20%;
+} */
+
+
+/*---------------- footer ----------------*/
+.footer{
+    width:100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+.footer .company{
+    width: 350px;
+    font:normal 0.75em 'Nanum Gothic';
+    letter-spacing: -0.1em;
+    color: #555;
+    margin-top: 20px;
+}
+.footer .company h2{
+    margin-bottom: 15px;
+}
+.footer .company p{
+    line-height: 25px;
+}
+.footer .company #site{
+    margin-top: 50px;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    font:normal 0.9em 'Nanum Gothic';
+    color: #555;
+}
+#site:focus{
+    outline: none;
+}
+#site option{
+    background-color: #eee;
+    border-radius: 5px;
+}
+.company .fwrap{
+    display: flex;
     justify-content: space-between;
 }
-#about .profile{
-    width:300px;
-    height: 300px;
-    font-family: 'Nanum Gothic';
-    position: relative;
+.fwrap .info1{
+    flex: 1 1 50%;
 }
-#about .profile .subtext{
-    position: absolute;
-    z-index: 2;
-    width: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-#about .edu{
-    width: 380px;
-    height: 300px;
-    position: relative;
-}
-#about .edu .subtext2{
-    position: absolute;
-    z-index: 2;
-    width: 95%;
-    left: 55%;
-    transform: translateX(-50%);
-}
-#about .etc{
-    width: 300px;
-    height: 300px;
-    position: relative;
-}
-#about .etc .subtext3{
-    position: absolute;
-    z-index: 2;
-    width: 90%;
-    left: 60%;
-    transform: translateX(-50%);
-}
-#about h3{
-    font: bold 1.3em 'Rajdhani';
-}
-#about .profile p:nth-of-type(1){
-    font: bold 1em 'Nanum Gothic';
-}
-#about .profile p:nth-of-type(2){
-    font: bold 1em 'Nanum Gothic';
-}
-#about .profile p:nth-of-type(3){
-    font: normal 1em 'Nanum Gothic';
-}
-#about .profile p:nth-of-type(5){
-    font: bold 1em 'Nanum Gothic';
-}
-#about .profile p:nth-of-type(6),
-#about .profile p:nth-of-type(7){
-    font: normal 1em 'Nanum Gothic';
+.fwrap .info2{
+    flex: 1 1 50%;
 }
 
-#about .edu p:nth-of-type(1),
-#about .edu p:nth-of-type(2),
-#about .edu p:nth-of-type(3){
-    font: normal 1em 'Nanum Gothic';
+
+.footer .footermenu{
+    width: 750px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    font:normal 0.8em 'Nanum Gothic';
+    border-top: 2px solid #cebea2;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+.footermenu a{
+    color: #555;
+}
+.footermenu .ftitle{
+    font-weight: bold;
+    line-height: 30px;
+}
+.footermenu ul{
+    flex: 1 1 70%;
+    display: flex;
+    text-align: left;
+}
+.footermenu li{
+    flex: 1 1 20%;
+    line-height: 25px;
+}
+.footermenu .member{
+    flex: 1 1 20%;
+    text-align: right;
+    line-height: 30px;
+}
+.footermenu .member p:nth-of-type(4){
+    font: bold 1.1em 'Nanum Gothic';
+    line-height: 35px;
+}
+.footermenu .footersns{
+    width: 100%;
+    height: 40px;
+    text-align: right;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
-#about .edu p:nth-of-type(1) span,
-#about .edu p:nth-of-type(2) span,
-#about .edu p:nth-of-type(3) span{
-    font: bold 1em 'Nanum Gothic';
-}
-
-#about .etc p:nth-of-type(1),
-#about .etc p:nth-of-type(2){
-    font: normal 1em 'Nanum Gothic';
-    margin-bottom: 10px;
-}
-#about .etc p:nth-of-type(1) span,
-#about .etc p:nth-of-type(2) span{
-    font: bold 1em 'Nanum Gothic';
-}
-#about .icontitle{
-    text-align: center;
-    margin-bottom: 30px;
-}
-#about img{
-    height: 70px;
-}
-
-/*----------------3 페이지------------------*/
-#skills{
-    width: 100%;
-    height: 100vh;
-    background-attachment: fixed;
+.footersns a{
     position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid #bab2aa;
+    background: #fff;
+    vertical-align: top;
 }
-#skills .container{
-    width: 90%;
-    margin: auto;
-    position: relative;
-}
-#skills h2{
+.footersns a::before{
     position: absolute;
-    z-index: 10;
-    left: 0;
-    font: bold 1.7em 'Rajdhani';
-    padding-top: 220px;
-}
-#skills h2::before{
-    content: '02';
-    position: absolute;
-    z-index: -1;
-    color: #ddd;
-    font-size: 180px;
-    left: -70px;
-    top: 85px;
-    font-family: 'Rajdhani';
-}
-#skills .box{
-    position: absolute;
-    z-index: 2;
-    top: 75%;
+    content: '';
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60%;
-    height: 100px;
-    margin: auto;
+    background: url(img/icon_sns.png) no-repeat;
 }
-#skills .box ul{
+.footersns .sfacebook::before{
+    width: 9px;
+    height: 16px;
+    margin: -8px 0 0 -5px;
+    background-position: -14px 0;
+}
+.footersns .sinsta::before{
+    width: 21px;
+    height: 19px;
+    margin: -8px 0 0 -10px;
+    background-position: -42px 0;
+}
+.footersns .sblog::before{
+    width: 15px;
+    height: 15px;
+    margin: -7px 0 0 -7px;
+    background-position: -97px 0;
+}
+.footersns .stwt::before{
+    width: 14px;
+    height: 11px;
+    margin: -6px 0 0 -6px;
+    background-position: 0 0;
+}
+.footersns .syt::before{
+    width: 19px;
+    height: 21px;
+    margin: -11px 0 0 -9px;
+    background-position: -23px 0;
+}
+
+
+
+.footermenu .last{
     width: 100%;
-    /* display: flex; */
-}
-#skills .box li{
-    /* flex: 1 1 25%; */
+    border-top: 1px solid #cebea2;
+    box-sizing: border-box;
+    padding-top: 15px;
+    font: normal 0.9em 'Nanum Gothic';
+    letter-spacing: -0.1em;
+    word-spacing: 0.7em;
     text-align: center;
-    font: bold 1em 'Nanum Gothic';
 }
-#skills .box li:nth-child(1){
-    position: absolute;
-    z-index: 2;
-    top: 10px;
-    left: 10%;
-    transform: translateX(-50%);
-}
-#skills .box li:nth-child(2){
-    position: absolute;
-    z-index: 2;
-    top: 10px;
-    left: 37%;
-    transform: translateX(-50%);
-}
-#skills .box li:nth-child(3){
-    position: absolute;
-    z-index: 2;
-    top: 10px;
-    left: 64%;
-    transform: translateX(-50%);
-}
-#skills .box li:nth-child(4){
-    position: absolute;
-    z-index: 2;
-    top: 10px;
-    left: 90%;
-    transform: translateX(-50%);
-}
-
-#skills svg{
-    width: 100%;
-    height: 100%;
-}
-
-#skills .st0{
-    fill:none;
-    stroke:#E1E1E1;
-    stroke-width:25;
-    stroke-linecap:round;
-    stroke-miterlimit:10;
-}
-#skills .st1{
-    fill:none;
-    stroke:#138C75;
-    stroke-width:25;
-    stroke-linecap:round;
-    stroke-miterlimit:10;
-    stroke-dasharray: 401.08;
-    stroke-dashoffset: 401.08;
-}
-#skills .st2{
-    fill:none;
-    stroke:#117560;
-    stroke-width:25;
-    stroke-linecap:round;
-    stroke-miterlimit:10;
-    stroke-dasharray: 401.08;
-    stroke-dashoffset: 401.08;
-}
-#skills .st3{
-    fill:none;
-    stroke:#0D5C4C;
-    stroke-width:25;
-    stroke-linecap:round;
-    stroke-miterlimit:10;
-    stroke-dasharray: 401.08;
-    stroke-dashoffset: 401.08;
-}
-#skills .st4{
-    fill:none;
-    stroke:#06473A;
-    stroke-width:25;
-    stroke-linecap:round;
-    stroke-miterlimit:10;
-    stroke-dasharray: 401.08;
-    stroke-dashoffset: 401.08;
-}
-
-.section .ani02{animation: strokeani01 1.5s forwards;}
-.section .ani03{animation: strokeani02 1.5s 0.3s forwards;}
-.section .ani04{animation: strokeani03 1.5s 0.5s forwards;}
-.section .ani05{animation: strokeani04 1.5s 0.7s forwards;}
-
-@keyframes strokeani01{
-    from{stroke-dashoffset: 401.08;}
-    to{stroke-dashoffset: 50;}
-}
-@keyframes strokeani02{
-    from{stroke-dashoffset: 401.08;}
-    to{stroke-dashoffset: 90;}
-}
-@keyframes strokeani03{
-    from{stroke-dashoffset: 401.08;}
-    to{stroke-dashoffset: 50;}
-}
-@keyframes strokeani04{
-    from{stroke-dashoffset: 401.08;}
-    to{stroke-dashoffset: 50;}
-}
-
-
-/*----------------4 페이지------------------*/
-#work{
-    width: 100%;
-    height: 100vh;
-    background-attachment: fixed;
-    position: relative;
-}
-#work .slide{
-    width: 100%;
-    height: 100vh;
-}
-#work .slide .container{
-    width: 90%;
-    margin: auto;
-    position: relative;
-}
-#work .container h2{
-    position: absolute;
-    left: 0;
-    font: bold 1.7em 'Rajdhani';
-    padding-top: 220px;
-}
-#work .container h2::before{
-    content: '03';
-    position: absolute;
-    z-index: -1;
-    color: #ddd;
-    font-size: 180px;
-    left: -70px;
-    top: 85px;
-    font-family: 'Rajdhani';
-}
-#work .container .slide_bar{
-    position: absolute;
-    right: 5%;
-    top: 25%;
-}
-#work .current_page{
-    padding-bottom: 15px;
+.footermenu .last span:nth-child(3){
+    font-weight: bold;
     color: red;
 }
-#work .total_page{
-    padding-top: 15px;
+
+/*---------------- 미디어쿼리 ----------------*/
+
+.header svg{ /*모바일크기 전환시 나타나는 메뉴바*/
+    display: none;
 }
-#work .slide_bar .bar{
-    width: 1px;
-    height: 100px;
-    background-color: #ddd;
-    margin-left: 8px;
-}
-#work .slide .publishing{
-    display: flex;
-}
-#work .slide .publishing .left_txt{
-    padding: 300px 0 0 190px;
-}
-#work .left_txt .sitetitle{
-    font: normal 1.5em 'Rajdhani';
-    padding-bottom: 20px;
-    color: black;
-}
-#work .left_txt p{
-    font: normal 1.1em 'Nanum Gothic';
-    color: #333;
-}
-#work .view{
-    cursor: pointer;
-    margin-top: 70px;
-    width: 200px;
-    height: 40px;
-    border: 1px solid #555;
-    text-align: center;
-    box-sizing: border-box;
-    font: normal 1em 'Rajdhani';
-    padding-top: 9px;
-}
-#work .slide img{
-    width: 60%;
-}
-#work .slide .publishing_img{
-    margin: 180px 0 0 55px;
+.gnb{
+    display: none;
 }
 
-
-/*----------------4 페이지------------------*/
-#admin{
-    width: 100%;
-    height: 100vh;
-    background-attachment: fixed;
-    position: relative;
-}
-#admin .container{
-    width: 90%;
-    margin: auto;
-    position: relative;
-}
-#admin h2{
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    font: bold 1.7em 'Rajdhani';
-    padding-top: 220px;
-}
-#admin h2::before{
-    content: '04';
-    position: absolute;
-    z-index: -1;
-    color: #ddd;
-    font-size: 180px;
-    left: -70px;
-    top: 85px;
-    font-family: 'Rajdhani';
-}
-
-#admin .publishing{
-    display: flex;
-}
-#admin .publishing .left_txt{
-    padding: 300px 0 0 190px;
-}
-#admin .left_txt .sitetitle{
-    font: normal 1.5em 'Rajdhani';
-    padding-bottom: 20px;
-    color: black;
-}
-#admin .left_txt p{
-    font: normal 1.1em 'Nanum Gothic';
-    color: #333;
-}
-#admin .view{
-    cursor: pointer;
-    margin-top: 70px;
-    width: 200px;
-    height: 40px;
-    border: 1px solid #555;
-    text-align: center;
-    box-sizing: border-box;
-    font: normal 1em 'Rajdhani';
-    padding-top: 9px;
-}
-#admin img{
-    width: 60%;
-}
-#admin .publishing_img{
-    margin: 200px 0 0 55px;
+.event .bx-wrapper{
+    width: 25%;
 }
