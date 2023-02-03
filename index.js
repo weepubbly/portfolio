@@ -1,40 +1,27 @@
-    let flag = 0;
-    $('.header #monthly').click(function(){
-        if(flag == 0){
-            $('.header .hide').css('top', '0px');
-            flag = 1;
-        }else{
-            $('.header .hide').css('top', '-210px');
-            flag =0;
-        }
-    });
-    $('.nav li').mouseenter(function(){
-        $(this).find('.sub').css('height','350px');
-        $(this).find('.circle').css('height', '13px');
-    });
-    $('.nav li').mouseleave(function(){
-        $(this).find('.sub').css('height','0');
-        $(this).find('.circle').css('height', '0');
-    });
-
-//----------------------------슬라이드------------------------------    
-$('.banner .bx').bxSlider({
-    mode: 'horizontal',
-    auto: true,
-    speed: 2000
-});
-$('.banner2 .bx').bxSlider({
-    mode: 'horizontal',
-    auto: true,
-    speed: 2000
+$('.center3, .center2, .center1, .title').hide();
+$('.center3').delay(500).show("pulsate",500, function(){
+    $('.center2').show("pulsate",500);
+    $('.center1').delay(500).show("pulsate",500);
+    $('.title').delay(1500).show("fade",1000);
 });
 
-$('.event .bx2').bxSlider({
-    mode: 'horizontal',
-    auto: true,
-    speed: 2000
+$('.section').on('mousewheel',function(e, d){
+    if(d > 0){
+        //휠을 올릴 때
+        let prev = $(this).prev().offset().top;
+        $('html, body').stop().animate({
+            'scrollTop':prev
+        },1000, 'swing');
+    }else if( d < 0){
+        //휠을 내릴 때
+        let next = $(this).next().offset().top;
+        $('html, body').stop().animate({
+            'scrollTop':next
+        },1000, 'swing');
+    }
 });
-//----------------------------슬라이드------------------------------
+
+
 
 $(window).scroll(function(){
     let sc =parseInt($(this).scrollTop());
@@ -42,33 +29,43 @@ $(window).scroll(function(){
     $(window).resize(function(){ //윈도우 크기조정 이벤트 함수
         ht = $(window).height();
     });
-    if(sc >= (ht*2)-300 && sc < (ht*3)+100){
-        $('.content').children('img').eq(0).stop().animate({
-            left:'30%'
-        },800);
-        $('.content').children('img').eq(1).stop().animate({
-            right:'35%'
+    if(sc >= (ht*1)-400 && sc < (ht*2)+100){
+        $('#about .wrap').stop().animate({
+            top:'60%'
         },800);
     }else{
-        $('.content').children('img').eq(0).stop().animate({
-            left:'0%'
-        },800);
-        $('.content').children('img').eq(1).stop().animate({
-            right:'0%'
+        $('#about .wrap').stop().animate({
+            top:'85%'
         },800);
         }
+    if(sc >= (ht*2)-400 && sc < (ht*3)+100){
+        $('#skills .st1').addClass('ani02');
+        $('#skills .st2').addClass('ani03');
+        $('#skills .st3').addClass('ani04');
+        $('#skills .st4').addClass('ani05');
+    }else{
+        $('#skills .st1').removeClass('ani02');
+        $('#skills .st2').removeClass('ani03');
+        $('#skills .st3').removeClass('ani04');
+        $('#skills .st4').removeClass('ani05');
+        }
+    
+    if(sc > (ht*1)-200){
+        $('.header').css({
+            background : 'rgba(13,92,76,0.3)',
+            boxShadow : '0 2px 5px #333'
+        });
+    }else{
+        $('.header').css({
+            background: 'rgba(0,0,0,0)',
+            boxShadow : 'none'
+        });
+    }
 });
 
-//----------------------------모바일 헤더메뉴------------------------------
-$('.header .bar_menu').click(function(){
-    $('.gnb').css({
-        left:0
-    });
-});
-$('.gnb .close').click(function(){
-    $('.gnb').css('left', '-100%')
-});
 
-// $('.gnb li').children('svg').click(function(){
-//     $('.gnb li').css('height', '30%')
-// });
+$('#work').bxSlider({
+    mode: 'horizontal',
+    auto: false,
+    speed: 1000
+});
