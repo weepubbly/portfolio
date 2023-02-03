@@ -23,6 +23,11 @@ $('.banner .bx').bxSlider({
     auto: true,
     speed: 2000
 });
+$('.banner2 .bx').bxSlider({
+    mode: 'horizontal',
+    auto: true,
+    speed: 2000
+});
 
 $('.event .bx2').bxSlider({
     mode: 'horizontal',
@@ -39,10 +44,10 @@ $(window).scroll(function(){
     });
     if(sc >= (ht*2)-300 && sc < (ht*3)+100){
         $('.content').children('img').eq(0).stop().animate({
-            left:'33%'
+            left:'30%'
         },800);
         $('.content').children('img').eq(1).stop().animate({
-            right:'40%'
+            right:'35%'
         },800);
     }else{
         $('.content').children('img').eq(0).stop().animate({
@@ -53,3 +58,17 @@ $(window).scroll(function(){
         },800);
         }
 });
+
+//----------------------------모바일 헤더메뉴------------------------------
+$('.header .bar_menu').click(function(){
+    $('.gnb').css({
+        left:0
+    });
+});
+$('.gnb .close').click(function(){
+    $('.gnb').css('left', '-100%')
+});
+
+// $('.gnb li').children('svg').click(function(){
+//     $('.gnb li').css('height', '30%')
+// });
