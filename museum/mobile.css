@@ -204,14 +204,12 @@
     display: none;
 }
 .section1 .content2{
+    display: block;
     width: 100%;
     position: relative;
 }
 .section1 .content2 img{
     width: 100%;
-}
-.section1 .content2{
-    display: block;
 }
 /*-------------------section2 관람안내----------------------*/
 .section2 .info{
@@ -324,16 +322,16 @@
     margin-left: 10px;
 }
 #sub1 a{
-    width: 80%;
-}
-#sub2 a{
     width: 70%;
 }
-#sub3 a{
+#sub2 a{
     width: 60%;
 }
+#sub3 a{
+    width: 50%;
+}
 #sub4 a{
-    width: 60%;
+    width: 50%;
 }
 
 .notice .banner{
@@ -369,11 +367,16 @@
 }
 .footer .link:nth-child(3){
     flex: 0 1 300px;
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+.footer .link:nth-child(2){
+    flex: 1 1 55%;
+    margin-top: 30px;
     margin-left: 10px;
 }
 .footer .link:nth-child(2) ul{
-    width: 50%;
+    width: 280px;
 }
 .footer .link:nth-child(4){
     margin-top: 100px;

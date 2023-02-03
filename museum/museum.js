@@ -143,21 +143,6 @@ $('.footer .linktitle1').click(function(){
         flag = 0;
     }
 });
-    //     setTimeout(function(){
-    //         $('.linkbox1').css({
-    //             height: '60px',
-    //             top : '60px'
-    //         });
-    //         $('.footer .link:nth-child(2) li:nth-child(1)').css({
-    //             overflow :'hidden',
-    //             backgroundColor: 'white',
-    //             color: 'black'
-    //         });
-
-    //     },400);
-    //     flag = 0;
-    // }
-
 
 $('.footer .linktitle2').click(function(){
     if(flag == 0){

@@ -759,7 +759,7 @@ a:link , a:visited{text-decoration: none; color: #333;}
     border-bottom: 2px solid black;
 }
 .footer .link:nth-child(2) ul{
-    width: 70%;
+    width: 290px;
 }
 .footer .link:nth-child(2) li{
     font: normal 0.95em 'Nanum Gothic';
