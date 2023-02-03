@@ -442,7 +442,7 @@ a:link , a:visited{
     flex:1 1 25%;
 }
 .event ul{
-    width:90%;
+    width:273.4px;
     margin: auto;
     border: 0.5px solid #c1ae96;
     border-radius: 10px;
@@ -506,14 +506,14 @@ a:link , a:visited{
 .content img:nth-child(1){
     position: absolute;
     width: 30%;
-    top:40%;
+    top:39%;
     transform: translateY(-50%);
     left:0%;
 }
 .content img:nth-child(2){
     position: absolute;
     width: 30%;
-    top:67%;
+    top:71%;
     transform: translateY(-50%);
     right:0;
 }
@@ -761,7 +761,7 @@ a:link , a:visited{
 
 
 .footer .footermenu{
-    width: 750px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -862,6 +862,7 @@ a:link , a:visited{
     letter-spacing: -0.1em;
     word-spacing: 0.7em;
     text-align: center;
+    margin-bottom: 20px;
 }
 .footermenu .last span:nth-child(3){
     font-weight: bold;

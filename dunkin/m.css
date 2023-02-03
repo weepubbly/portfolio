@@ -165,7 +165,9 @@
 .content2{
     display: block;
 }
-
+.content2 img{
+    width: 50%;
+}
 
 /* ---------------메뉴---------------- */
 .menu .wrap div{
@@ -179,4 +181,31 @@
 /* ---------------푸터---------------- */
 .footer .footermenu{
     margin-bottom: 30px;
+}
+.footer .company{
+    margin-left: 15px;
+}
+.footermenu ul{
+    margin-left: 15px;
+}
+.footermenu .member{
+    flex: 1 1 70%;
+    display: flex;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.footermenu .member p{
+    flex: 1 1 19%;
+    text-align: left;
+}
+.footermenu .member p:nth-child(4){
+    line-height: 30px;
+    flex: 1 1 24%;
+}
+.footermenu .footersns{
+    text-align: left;
+    margin-left: 15px;
+}
+.footermenu .footersns a{
+    margin-right: 8px;
 }
