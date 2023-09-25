@@ -73,11 +73,11 @@ a:link , a:visited{text-decoration: none; color: #333;}
     height: 50px;
 }
 .header ul{
-    flex: 0 1 35%;
+    flex: 0 1 50%;
     display: flex;
 }
 .header li{
-    flex: 1 1 20%;
+    flex: 1 1 16.6%;
     line-height: 70px;
     text-align: center;
 }
@@ -282,14 +282,15 @@ a:link , a:visited{text-decoration: none; color: #333;}
 #skills .box li{
     /* flex: 1 1 25%; */
     text-align: center;
-    font: bold 1em 'Nanum Gothic';
+    font: bold 1.2em 'Rajdhani';
 }
 #skills .box li:nth-child(1){
     position: absolute;
     z-index: 2;
     top: 10px;
-    left: 10%;
+    left: 11%;
     transform: translateX(-50%);
+    color: #138C75;
 }
 #skills .box li:nth-child(2){
     position: absolute;
@@ -297,6 +298,7 @@ a:link , a:visited{text-decoration: none; color: #333;}
     top: 10px;
     left: 37%;
     transform: translateX(-50%);
+    color: #117560;
 }
 #skills .box li:nth-child(3){
     position: absolute;
@@ -304,6 +306,7 @@ a:link , a:visited{text-decoration: none; color: #333;}
     top: 10px;
     left: 64%;
     transform: translateX(-50%);
+    color: #0D5C4C;
 }
 #skills .box li:nth-child(4){
     position: absolute;
@@ -311,6 +314,7 @@ a:link , a:visited{text-decoration: none; color: #333;}
     top: 10px;
     left: 90%;
     transform: translateX(-50%);
+    color: #06473A;
 }
 
 #skills svg{
@@ -369,15 +373,15 @@ a:link , a:visited{text-decoration: none; color: #333;}
 
 @keyframes strokeani01{
     from{stroke-dashoffset: 401.08;}
-    to{stroke-dashoffset: 50;}
+    to{stroke-dashoffset: 80;}
 }
 @keyframes strokeani02{
     from{stroke-dashoffset: 401.08;}
-    to{stroke-dashoffset: 100;}
+    to{stroke-dashoffset: 90;}
 }
 @keyframes strokeani03{
     from{stroke-dashoffset: 401.08;}
-    to{stroke-dashoffset: 70;}
+    to{stroke-dashoffset: 120;}
 }
 @keyframes strokeani04{
     from{stroke-dashoffset: 401.08;}
@@ -469,7 +473,7 @@ a:link , a:visited{text-decoration: none; color: #333;}
 }
 
 
-/*----------------4 페이지------------------*/
+/*----------------5 페이지------------------*/
 #admin{
     width: 100%;
     height: 100vh;
@@ -530,4 +534,81 @@ a:link , a:visited{text-decoration: none; color: #333;}
 }
 #admin .publishing_img{
     margin: 200px 0 0 55px;
+}
+
+/*----------------6 페이지------------------*/
+#design{
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+}
+#design .container{
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+#design h2{
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    font: bold 1.7em 'Rajdhani';
+    padding-top: 220px;
+}
+#design h2::before{
+    content: '05';
+    position: absolute;
+    z-index: -1;
+    color: #ddd;
+    font-size: 180px;
+    left: -70px;
+    top: 85px;
+    font-family: 'Rajdhani';
+}
+#design .wrap{
+    width: 60%;
+    display: flex;
+    position: absolute;
+    left: 55%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#design #bck{
+    flex: 1 1 48%;
+    position: relative;
+    margin-bottom: 10px;
+}
+#design #bck p{
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    width: 400px;
+}
+
+#design #bck p::before{
+    position: absolute;
+    content: '';
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.4s;
+}
+#design #bck .place{
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    font: normal 1.1em 'Nanum Gothic';
+    transition: all 0.4s;
+}
+#design #bck p:hover::before,
+#design #bck p:hover .place{
+    opacity: 1;
 }

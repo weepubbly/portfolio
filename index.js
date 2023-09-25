@@ -61,6 +61,16 @@ $(window).scroll(function(){
             boxShadow : 'none'
         });
     }
+
+    if(sc >= (ht*5)-400 && sc < (ht*6)+100){
+        $('#design .wrap').stop().animate({
+            top:'60%'
+        },800);
+    }else{
+        $('#design .wrap').stop().animate({
+            top:'85%'
+        },800);
+        }
 });
 
 
@@ -68,4 +78,11 @@ $('#work').bxSlider({
     mode: 'horizontal',
     auto: false,
     speed: 1000
+});
+
+$('.popup').colorbox({
+    rel: 'popup' ,
+    iframe:true,
+    innerWidth:717,
+    innerHeight:600
 });
